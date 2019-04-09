@@ -1,0 +1,10 @@
+/* 
+    Created on : 29-ene-2017, 21:39:10
+    Author     : Frank
+*/
+.grid-plan-accion:before{font:16px/1 FontAwesome;color: #319118;content:"\f1cd"}
+
+.menu-activar-item:before{font:16px/1 FontAwesome;color: #ff6259;content:"\f204"}
+.menu-dasactivar-item:before{font:16px/1 FontAwesome;color: #64997d;content:"\f205"}
+
+.x-grid-row-final{background-color: #c2ffdb;}

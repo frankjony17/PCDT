@@ -1,0 +1,64 @@
+<?php
+
+namespace Calidad\CalidadBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CalPlanAccion
+ *
+ * @ORM\Table(name="cal_plan_accion", indexes={@ORM\Index(name="IDX_1A39AED0E4B82543", columns={"brechas_otros_id"})})
+ * @ORM\Entity
+ */
+class CalPlanAccion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descripcion", type="text", nullable=false)
+     */
+    private $descripcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_inicial", type="date", nullable=false)
+     */
+    private $fechaInicial;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha_final", type="date", nullable=false)
+     */
+    private $fechaFinal;
+
+    /**
+     * @var \CalBrechasOtros
+     *
+     * @ORM\ManyToOne(targetEntity="CalBrechasOtros", inversedBy="planAccion")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="brechas_otros_id", referencedColumnName="id")
+     * })
+     */
+    private $brechasOtros;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="estado", type="boolean", nullable=true)
+     */
+    private $estado;
+
+
+
+}

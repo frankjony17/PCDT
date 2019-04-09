@@ -1,3 +1,9 @@
+calidad:
+    resource: "@CalidadBundle/Controller/"
+    type:     annotation
+    prefix:   /controlcalidad/
+    schemes: [http]
+
 indicador:
     resource: "@IndicadorBundle/Controller/"
     type:     annotation

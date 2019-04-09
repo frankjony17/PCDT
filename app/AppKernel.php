@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Otros\NomencladorBundle\NomencladorBundle(),
             new Otros\TareaOperativaBundle\TareaOperativaBundle(),
             new Indicadores\IndicadorBundle\IndicadorBundle(),
+            new Calidad\CalidadBundle\CalidadBundle(),
         );
         return $bundles;
     }

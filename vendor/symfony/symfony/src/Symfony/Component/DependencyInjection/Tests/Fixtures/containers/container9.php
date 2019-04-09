@@ -52,7 +52,7 @@ $container->
     addMethodCall('setBar', array(new Reference('foo2', ContainerInterface::NULL_ON_INVALID_REFERENCE)))->
     addMethodCall('setBar', array(new Reference('foo3', ContainerInterface::IGNORE_ON_INVALID_REFERENCE)))->
     addMethodCall('setBar', array(new Reference('foobaz', ContainerInterface::IGNORE_ON_INVALID_REFERENCE)))->
-    addMethodCall('setBar', array(new Expression('service("foo").foo() ~ parameter("foo")')))
+    addMethodCall('setBar', array(new Expression('service("foo").foo() ~ (container.hasparameter("foo") ? parameter("foo") : "default")')))
 ;
 $container->
     register('factory_service', 'Bar')->
@@ -102,6 +102,21 @@ $container
 $container
     ->register('decorator_service_with_name', 'stdClass')
     ->setDecoratedService('decorated', 'decorated.pif-pouf')
+;
+$container
+    ->register('new_factory', 'FactoryClass')
+    ->setProperty('foo', 'bar')
+    ->setScope('container')
+    ->setPublic(false)
+;
+$container
+    ->register('new_factory_service', 'FooBarBaz')
+    ->setProperty('foo', 'bar')
+    ->setFactory(array(new Reference('new_factory'), 'getInstance'))
+;
+$container
+    ->register('service_from_static_method', 'Bar\FooClass')
+    ->setFactory(array('Bar\FooClass', 'getInstance'))
 ;
 
 return $container;

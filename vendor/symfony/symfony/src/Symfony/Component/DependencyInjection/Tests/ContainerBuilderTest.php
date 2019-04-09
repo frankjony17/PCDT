@@ -16,7 +16,6 @@ require_once __DIR__.'/Fixtures/includes/ProjectExtension.php';
 
 use Symfony\Component\Config\Resource\ResourceInterface;
 use Symfony\Component\DependencyInjection\Alias;
-use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Definition;
@@ -319,26 +318,18 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers Symfony\Component\DependencyInjection\ContainerBuilder::createService
      */
-    public function testCreateServiceFactoryMethod()
+    public function testCreateServiceFactory()
     {
         $builder = new ContainerBuilder();
-        $builder->register('bar', 'stdClass');
-        $builder->register('foo1', 'Bar\FooClass')->setFactoryClass('Bar\FooClass')->setFactoryMethod('getInstance')->addArgument(array('foo' => '%value%', '%value%' => 'foo', new Reference('bar')));
-        $builder->setParameter('value', 'bar');
-        $this->assertTrue($builder->get('foo1')->called, '->createService() calls the factory method to create the service instance');
-        $this->assertEquals(array('foo' => 'bar', 'bar' => 'foo', $builder->get('bar')), $builder->get('foo1')->arguments, '->createService() passes the arguments to the factory method');
-    }
+        $builder->register('foo', 'Bar\FooClass')->setFactory('Bar\FooClass::getInstance');
+        $builder->register('qux', 'Bar\FooClass')->setFactory(array('Bar\FooClass', 'getInstance'));
+        $builder->register('bar', 'Bar\FooClass')->setFactory(array(new Definition('Bar\FooClass'), 'getInstance'));
+        $builder->register('baz', 'Bar\FooClass')->setFactory(array(new Reference('bar'), 'getInstance'));
 
-    /**
-     * @covers Symfony\Component\DependencyInjection\ContainerBuilder::createService
-     */
-    public function testCreateServiceFactoryService()
-    {
-        $builder = new ContainerBuilder();
-        $builder->register('baz_service')->setFactoryService('baz_factory')->setFactoryMethod('getInstance');
-        $builder->register('baz_factory', 'BazClass');
-
-        $this->assertInstanceOf('BazClass', $builder->get('baz_service'));
+        $this->assertTrue($builder->get('foo')->called, '->createService() calls the factory method to create the service instance');
+        $this->assertTrue($builder->get('qux')->called, '->createService() calls the factory method to create the service instance');
+        $this->assertTrue($builder->get('bar')->called, '->createService() uses anonymous service as factory');
+        $this->assertTrue($builder->get('baz')->called, '->createService() uses another service as factory');
     }
 
     /**
@@ -486,7 +477,7 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
             'foo' => array(
                 array('foo' => 'foo'),
                 array('foofoo' => 'foofoo'),
-            )
+            ),
         ), '->findTaggedServiceIds() returns an array of service ids and its tag attributes');
         $this->assertEquals(array(), $builder->findTaggedServiceIds('foobar'), '->findTaggedServiceIds() returns an empty array if there is annotated services');
     }
@@ -569,7 +560,7 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
 
         $container->compile();
 
-        $classesPath       = realpath(__DIR__.'/Fixtures/includes/classes.php');
+        $classesPath = realpath(__DIR__.'/Fixtures/includes/classes.php');
         $matchingResources = array_filter(
             $container->getResources(),
             function (ResourceInterface $resource) use ($classesPath) {
@@ -643,16 +634,16 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testPrivateServiceUser()
     {
-        $fooDefinition     = new Definition('BarClass');
+        $fooDefinition = new Definition('BarClass');
         $fooUserDefinition = new Definition('BarUserClass', array(new Reference('bar')));
-        $container         = new ContainerBuilder();
+        $container = new ContainerBuilder();
         $container->setResourceTracking(false);
 
         $fooDefinition->setPublic(false);
 
         $container->addDefinitions(array(
-            'bar'       => $fooDefinition,
-            'bar_user'  => $fooUserDefinition
+            'bar' => $fooDefinition,
+            'bar_user' => $fooUserDefinition,
         ));
 
         $container->compile();
@@ -805,7 +796,9 @@ class ContainerBuilderTest extends \PHPUnit_Framework_TestCase
     }
 }
 
-class FooClass {}
+class FooClass
+{
+}
 
 class ProjectContainer extends ContainerBuilder
 {

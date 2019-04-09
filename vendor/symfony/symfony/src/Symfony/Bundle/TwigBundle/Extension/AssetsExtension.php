@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Routing\RequestContext;
 
 /**
- * Twig extension for Symfony assets helper
+ * Twig extension for Symfony assets helper.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -24,7 +24,7 @@ class AssetsExtension extends \Twig_Extension
     private $container;
     private $context;
 
-    public function __construct(ContainerInterface $container, RequestContext $requestContext)
+    public function __construct(ContainerInterface $container, RequestContext $requestContext = null)
     {
         $this->container = $container;
         $this->context = $requestContext;
@@ -48,10 +48,10 @@ class AssetsExtension extends \Twig_Extension
      *
      * Absolute paths (i.e. http://...) are returned unmodified.
      *
-     * @param string              $path        A public path
-     * @param string              $packageName The name of the asset package to use
-     * @param bool                $absolute    Whether to return an absolute URL or a relative one
-     * @param string|bool|null    $version     A specific version
+     * @param string           $path        A public path
+     * @param string           $packageName The name of the asset package to use
+     * @param bool             $absolute    Whether to return an absolute URL or a relative one
+     * @param string|bool|null $version     A specific version
      *
      * @return string A public path which takes into account the base path and URL path
      */
@@ -93,12 +93,18 @@ class AssetsExtension extends \Twig_Extension
      *
      * @param string $url The URL that has to be absolute
      *
+     * @throws \RuntimeException
+     *
      * @return string The absolute URL
      */
     private function ensureUrlIsAbsolute($url)
     {
         if (false !== strpos($url, '://') || 0 === strpos($url, '//')) {
             return $url;
+        }
+
+        if (!$this->context) {
+            throw new \RuntimeException('To generate an absolute URL for an asset, the Symfony Routing component is required.');
         }
 
         if ('' === $host = $this->context->getHost()) {

@@ -30,13 +30,15 @@ class ConfigDebugCommand extends AbstractConfigCommand
     protected function configure()
     {
         $this
-            ->setName('config:debug')
+            ->setName('debug:config')
+            ->setAliases(array(
+                'config:debug',
+            ))
             ->setDefinition(array(
-                new InputArgument('name', InputArgument::OPTIONAL, 'The Bundle name or the extension alias'),
+                new InputArgument('name', InputArgument::OPTIONAL, 'The bundle name or the extension alias'),
             ))
             ->setDescription('Dumps the current configuration for an extension')
             ->setHelp(<<<EOF
-
 The <info>%command.name%</info> command dumps the current configuration for an
 extension/bundle.
 
@@ -75,10 +77,10 @@ EOF
 
         $this->validateConfiguration($extension, $configuration);
 
+        $configs = $container->getParameterBag()->resolveValue($configs);
+
         $processor = new Processor();
         $config = $processor->processConfiguration($configuration, $configs);
-
-        $config = $container->getParameterBag()->resolveValue($config);
 
         if ($name === $extension->getAlias()) {
             $output->writeln(sprintf('# Current configuration for extension with alias: "%s"', $name));

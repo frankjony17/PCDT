@@ -15,7 +15,7 @@ services:
         calls:
             - [ setBar, [] ]
             - [ setBar ]
-            - [ setBar, ['@=service("foo").foo() ~ parameter("foo")'] ]
+            - [ setBar, ['@=service("foo").foo() ~ (container.hasparameter("foo") ? parameter("foo") : "default")'] ]
     method_call2:
         class: FooClass
         calls:
@@ -35,3 +35,6 @@ services:
     decorator_service_with_name:
         decorates: decorated
         decoration_inner_name: decorated.pif-pouf
+    new_factory1: { class: FooBarClass, factory: factory}
+    new_factory2: { class: FooBarClass, factory: [@baz, getClass]}
+    new_factory3: { class: FooBarClass, factory: [BazClass, getInstance]}

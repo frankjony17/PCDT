@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - etecsa_cd_db@localhost" uuid="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a" />
+    <data-source name="PostgreSQL - etecsa_cd_db@localhost" uuid="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>cdt_usr</user-name>
+      <schema-pattern>etecsa_cd_db.pg_catalog etecsa_cd_db.public</schema-pattern>
+      <default-schemas>etecsa_cd_db.pg_catalog etecsa_cd_db.public</default-schemas>
+    </data-source>
   </component>
 </project>

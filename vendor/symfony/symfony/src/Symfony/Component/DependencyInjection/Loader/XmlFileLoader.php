@@ -32,14 +32,11 @@ class XmlFileLoader extends FileLoader
     const NS = 'http://symfony.com/schema/dic/services';
 
     /**
-     * Loads an XML file.
-     *
-     * @param mixed  $file The resource
-     * @param string $type The resource type
+     * {@inheritdoc}
      */
-    public function load($file, $type = null)
+    public function load($resource, $type = null)
     {
-        $path = $this->locator->locate($file);
+        $path = $this->locator->locate($resource);
 
         $xml = $this->parseFileToDOM($path);
 
@@ -62,12 +59,7 @@ class XmlFileLoader extends FileLoader
     }
 
     /**
-     * Returns true if this class supports the given resource.
-     *
-     * @param mixed  $resource A resource
-     * @param string $type     The resource type
-     *
-     * @return bool    true if this class supports the given resource, false otherwise
+     * {@inheritdoc}
      */
     public function supports($resource, $type = null)
     {
@@ -75,7 +67,7 @@ class XmlFileLoader extends FileLoader
     }
 
     /**
-     * Parses parameters
+     * Parses parameters.
      *
      * @param \DOMDocument $xml
      * @param string       $file
@@ -88,7 +80,7 @@ class XmlFileLoader extends FileLoader
     }
 
     /**
-     * Parses imports
+     * Parses imports.
      *
      * @param \DOMDocument $xml
      * @param string       $file
@@ -109,7 +101,7 @@ class XmlFileLoader extends FileLoader
     }
 
     /**
-     * Parses multiple definitions
+     * Parses multiple definitions.
      *
      * @param \DOMDocument $xml
      * @param string       $file
@@ -129,7 +121,7 @@ class XmlFileLoader extends FileLoader
     }
 
     /**
-     * Parses an individual Definition
+     * Parses an individual Definition.
      *
      * @param string      $id
      * @param \DOMElement $service
@@ -166,6 +158,21 @@ class XmlFileLoader extends FileLoader
 
         $definition->setArguments($this->getArgumentsAsPhp($service, 'argument'));
         $definition->setProperties($this->getArgumentsAsPhp($service, 'property'));
+
+        if ($factories = $this->getChildren($service, 'factory')) {
+            $factory = $factories[0];
+            if ($function = $factory->getAttribute('function')) {
+                $definition->setFactory($function);
+            } else {
+                if ($childService = $factory->getAttribute('service')) {
+                    $class = new Reference($childService, ContainerInterface::EXCEPTION_ON_INVALID_REFERENCE, false);
+                } else {
+                    $class = $factory->getAttribute('class');
+                }
+
+                $definition->setFactory(array($class, $factory->getAttribute('method')));
+            }
+        }
 
         if ($configurators = $this->getChildren($service, 'configurator')) {
             $configurator = $configurators[0];
@@ -234,7 +241,7 @@ class XmlFileLoader extends FileLoader
     }
 
     /**
-     * Processes anonymous services
+     * Processes anonymous services.
      *
      * @param \DOMDocument $xml
      * @param string       $file
@@ -278,18 +285,20 @@ class XmlFileLoader extends FileLoader
         // resolve definitions
         krsort($definitions);
         foreach ($definitions as $id => $def) {
+            list($domElement, $file, $wild) = $def;
+
             // anonymous services are always private
-            $def[0]->setAttribute('public', false);
+            // we could not use the constant false here, because of XML parsing
+            $domElement->setAttribute('public', 'false');
 
-            $this->parseDefinition($id, $def[0], $def[1]);
+            $this->parseDefinition($id, $domElement, $file);
 
-            $oNode = $def[0];
-            if (true === $def[2]) {
-                $nNode = new \DOMElement('_services', null, self::NS);
-                $oNode->parentNode->replaceChild($nNode, $oNode);
-                $nNode->setAttribute('id', $id);
+            if (true === $wild) {
+                $tmpDomElement = new \DOMElement('_services', null, self::NS);
+                $domElement->parentNode->replaceChild($tmpDomElement, $domElement);
+                $tmpDomElement->setAttribute('id', $id);
             } else {
-                $oNode->parentNode->removeChild($oNode);
+                $domElement->parentNode->removeChild($domElement);
             }
         }
     }

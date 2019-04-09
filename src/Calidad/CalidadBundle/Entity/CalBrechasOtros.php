@@ -1,0 +1,380 @@
+<?php
+
+namespace Calidad\CalidadBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CalBrechasOtros
+ *
+ * @ORM\Table(name="cal_brechas_otros", uniqueConstraints={@ORM\UniqueConstraint(name="cal_brechas_otros_nombre_control_calidad_id_key", columns={"nombre", "control_calidad_id"})}, indexes={@ORM\Index(name="IDX_EDE148B05C9FF33E", columns={"control_calidad_id"})})
+ * @ORM\Entity(repositoryClass="Calidad\CalidadBundle\Entity\CalBrechasOtrosRepository")
+ */
+class CalBrechasOtros
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="text", nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="participantes", type="text", nullable=false)
+     */
+    private $participantes;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="fecha", type="date", nullable=false)
+     */
+    private $fecha;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="observaciones", type="text", nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tipo", type="string", length=128, nullable=false)
+     */
+    private $tipo;
+
+    /**
+     * @var \CalControlCalidad
+     *
+     * @ORM\ManyToOne(targetEntity="CalControlCalidad")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="control_calidad_id", referencedColumnName="id")
+     * })
+     */
+    private $controlCalidad;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="CalPlanAccion", mappedBy="brechasOtros")
+     */
+    private $planAccion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="estado", type="boolean", nullable=true)
+     */
+    private $estado;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="\Otros\NomencladorBundle\Entity\Trabajador", mappedBy="brechasOtros")
+     */
+    private $trabajador;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->trabajador = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->planAccion = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return CalBrechasOtros
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set participantes
+     *
+     * @param string $participantes
+     * @return CalBrechasOtros
+     */
+    public function setParticipantes($participantes)
+    {
+        $this->participantes = $participantes;
+
+        return $this;
+    }
+
+    /**
+     * Get participantes
+     *
+     * @return string 
+     */
+    public function getParticipantes()
+    {
+        return $this->participantes;
+    }
+
+    /**
+     * Set fecha
+     *
+     * @param \DateTime $fecha
+     * @return CalBrechasOtros
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get fecha
+     *
+     * @return \DateTime 
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * Set observaciones
+     *
+     * @param string $observaciones
+     * @return CalBrechasOtros
+     */
+    public function setObservaciones($observaciones)
+    {
+        $this->observaciones = $observaciones;
+
+        return $this;
+    }
+
+    /**
+     * Get observaciones
+     *
+     * @return string 
+     */
+    public function getObservaciones()
+    {
+        return $this->observaciones;
+    }
+
+    /**
+     * Set tipo
+     *
+     * @param string $tipo
+     * @return CalBrechasOtros
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+
+        return $this;
+    }
+
+    /**
+     * Get tipo
+     *
+     * @return string 
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * Set estado
+     *
+     * @param boolean $estado
+     * @return CalBrechasOtros
+     */
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Get estado
+     *
+     * @return boolean 
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * Set controlCalidad
+     *
+     * @param \Calidad\CalidadBundle\Entity\CalControlCalidad $controlCalidad
+     * @return CalBrechasOtros
+     */
+    public function setControlCalidad(\Calidad\CalidadBundle\Entity\CalControlCalidad $controlCalidad = null)
+    {
+        $this->controlCalidad = $controlCalidad;
+
+        return $this;
+    }
+
+    /**
+     * Get controlCalidad
+     *
+     * @return \Calidad\CalidadBundle\Entity\CalControlCalidad 
+     */
+    public function getControlCalidad()
+    {
+        return $this->controlCalidad;
+    }
+
+    /**
+     * Add planAccion
+     *
+     * @param \Calidad\CalidadBundle\Entity\CalPlanAccion $planAccion
+     * @return CalBrechasOtros
+     */
+    public function addPlanAccion(\Calidad\CalidadBundle\Entity\CalPlanAccion $planAccion)
+    {
+        $this->planAccion[] = $planAccion;
+
+        return $this;
+    }
+
+    /**
+     * Remove planAccion
+     *
+     * @param \Calidad\CalidadBundle\Entity\CalPlanAccion $planAccion
+     */
+    public function removePlanAccion(\Calidad\CalidadBundle\Entity\CalPlanAccion $planAccion)
+    {
+        $this->planAccion->removeElement($planAccion);
+    }
+
+    /**
+     * Get planAccion
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPlanAccion()
+    {
+        return $this->planAccion;
+    }
+
+    /**
+     * Add \Otros\NomencladorBundle\Entity\Trabajador
+     *
+     * @param \Otros\NomencladorBundle\Entity\Trabajador $trabajador
+     * @return CalBrechasOtros
+     */
+    public function addTrabajador(\Otros\NomencladorBundle\Entity\Trabajador $trabajador)
+    {
+        $this->trabajador[] = $trabajador;
+
+        return $this;
+    }
+
+    /**
+     * Remove \Otros\NomencladorBundle\Entity\Trabajador
+     *
+     * @param \Otros\NomencladorBundle\Entity\Trabajador $trabajador
+     */
+    public function removeTrabajador(\Otros\NomencladorBundle\Entity\Trabajador $trabajador)
+    {
+        $this->trabajador->removeElement($trabajador);
+    }
+
+    /**
+     * Get \Otros\NomencladorBundle\Entity\Trabajador
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTrabajador()
+    {
+        return $this->trabajador;
+    }
+
+    /**
+     * Get Array Row
+     *
+     * @return array
+     */
+    public function toArray()
+    {
+        $ejecuta = "";
+        $estadoTrue = 0;
+        $trabajadorId = '';
+        foreach ($this->getTrabajador() as $trabajador) {
+            $nombre = explode(" ", $trabajador->getNombreApellidos());
+            $ejecuta .= $nombre[0] ." ". $nombre[1] .", ";
+        }
+        foreach ($this->getPlanAccion() as $pa) {
+            if ($pa->getEstado()) {
+                $estadoTrue++;
+            }
+        }
+        if ($estadoTrue > 0) {
+            $progress = $estadoTrue / count($this->getPlanAccion());
+        } else {
+            $progress = 0;
+        }
+        foreach ($this->getTrabajador() as $trabajador)
+        {
+            $trabajadorId .= $trabajador->getId() .'-';
+        }
+
+        return array (
+            'id' => $this->id,
+            'tipo' => $this->getTipo(),
+            'estado' => $this->getEstado(),
+            'nombre' => $this->getNombre(),
+            'fecha' => $this->getFecha()->format("Y-m-d"),
+            'ejecuta' => rtrim($ejecuta, ", "),
+            'participan' => $this->getParticipantes(),
+            'observaciones' => $this->getObservaciones(),
+            'controlcalidad' => $this->getControlCalidad()->getControlTipo()->getNombre() ." (". $this->getControlCalidad()->getFecha()->format("Y-m-d") .")",
+            'progress' => $progress,
+            'trabajadores_ids' => $trabajadorId,
+            'estado' => $this->getEstado()
+        );
+    }
+}

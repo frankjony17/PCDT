@@ -55,12 +55,14 @@ class SecurityAuthentication
         }
         return '2';
     }
-    
+
     /**
      * Autenticar usuario y aplicar roles.
-     * 
+     *
      * @param entity $user Entidad Seguridad\AdminBundle\Entity\User
      * @param string $password Contraseña.
+     * @param $rolename
+     * @return string
      */
     private function setAuthenticate($user, $password, $rolename)
     {
@@ -79,7 +81,7 @@ class SecurityAuthentication
             
             $user_data = $this->userProvider->loadDataByUsername($user->getUsername());
             
-            if ($user_data !== \FALSE)
+            if ($user_data !== false)
             {
                 $this->session->set('trabajador_id', $user_data["trabajador_id"]);
                 $this->session->set('departamento_id', $user_data["departamento_id"]);

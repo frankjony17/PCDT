@@ -41,8 +41,8 @@ class TwigExtension extends Extension
                 foreach ($config['globals'] as $name => $value) {
                     if (is_array($value) && isset($value['key'])) {
                         $config['globals'][$name] = array(
-                            'key'   => $name,
-                            'value' => $config['globals'][$name]
+                            'key' => $name,
+                            'value' => $config['globals'][$name],
                         );
                     }
                 }
@@ -55,7 +55,7 @@ class TwigExtension extends Extension
 
         $container->setParameter('twig.exception_listener.controller', $config['exception_controller']);
 
-        $container->setParameter('twig.form.resources', $config['form']['resources']);
+        $container->setParameter('twig.form.resources', $config['form_themes']);
 
         $twigFilesystemLoaderDefinition = $container->getDefinition('twig.loader.filesystem');
 
@@ -109,12 +109,9 @@ class TwigExtension extends Extension
         }
 
         if (isset($config['autoescape_service']) && isset($config['autoescape_service_method'])) {
-            $container->findDefinition('templating.engine.twig')->addMethodCall('setDefaultEscapingStrategy', array(array(new Reference($config['autoescape_service']), $config['autoescape_service_method'])));
-
-            unset($config['autoescape_service'], $config['autoescape_service_method']);
-        } elseif (!isset($config['autoescape'])) {
-            $container->findDefinition('templating.engine.twig')->addMethodCall('setDefaultEscapingStrategy', array(array(new Reference('templating.engine.twig'), 'guessDefaultEscapingStrategy')));
+            $config['autoescape'] = array(new Reference($config['autoescape_service']), $config['autoescape_service_method']);
         }
+        unset($config['autoescape_service'], $config['autoescape_service_method']);
 
         $container->setParameter('twig.options', $config);
 

@@ -2,12 +2,13 @@
 parameters:
     database_driver: pdo_pgsql
     database_host: 127.0.0.1
+#192.168.66.118
     
     database_port: 5432
     database_name: etecsa_cd_db
     
-    database_user: devusr
-    database_password: devusr
+    database_user: cdt_usr
+    database_password: Pr3m1um*
     
     debug_toolbar: false
     debug_redirects: false

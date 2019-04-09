@@ -74,6 +74,28 @@ class SimpleFormTest extends AbstractFormTest
         $this->assertSame('bar', $form->getViewData());
     }
 
+    /**
+     * @expectedException        \Symfony\Component\Form\Exception\TransformationFailedException
+     * @expectedExceptionMessage Unable to transform value for property path "name": No mapping for value "arg"
+     */
+    public function testDataTransformationFailure()
+    {
+        $model = new FixedDataTransformer(array(
+            'default' => 'foo',
+        ));
+        $view = new FixedDataTransformer(array(
+            'foo' => 'bar',
+        ));
+
+        $config = new FormConfigBuilder('name', null, $this->dispatcher);
+        $config->addViewTransformer($view);
+        $config->addModelTransformer($model);
+        $config->setData('arg');
+        $form = new Form($config);
+
+        $form->getData();
+    }
+
     // https://github.com/symfony/symfony/commit/d4f4038f6daf7cf88ca7c7ab089473cce5ebf7d8#commitcomment-1632879
     public function testDataIsInitializedFromSubmit()
     {
@@ -100,19 +122,19 @@ class SimpleFormTest extends AbstractFormTest
     public function testFalseIsConvertedToNull()
     {
         $mock = $this->getMockBuilder('\stdClass')
-            ->setMethods(array('preBind'))
+            ->setMethods(array('preSubmit'))
             ->getMock();
         $mock->expects($this->once())
-            ->method('preBind')
+            ->method('preSubmit')
             ->with($this->callback(function ($event) {
                 return null === $event->getData();
             }));
 
         $config = new FormConfigBuilder('name', null, $this->dispatcher);
-        $config->addEventListener(FormEvents::PRE_BIND, array($mock, 'preBind'));
+        $config->addEventListener(FormEvents::PRE_SUBMIT, array($mock, 'preSubmit'));
         $form = new Form($config);
 
-        $form->bind(false);
+        $form->submit(false);
 
         $this->assertTrue($form->isValid());
         $this->assertNull($form->getData());
@@ -518,7 +540,7 @@ class SimpleFormTest extends AbstractFormTest
                 '' => '',
                 // direction is reversed!
                 'norm' => 'filteredclient',
-                'filterednorm' => 'cleanedclient'
+                'filterednorm' => 'cleanedclient',
             )))
             ->addModelTransformer(new FixedDataTransformer(array(
                 '' => '',

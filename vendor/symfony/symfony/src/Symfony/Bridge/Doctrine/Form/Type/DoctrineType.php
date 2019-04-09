@@ -60,7 +60,7 @@ abstract class DoctrineType extends AbstractType
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        $choiceListCache =& $this->choiceListCache;
+        $choiceListCache = & $this->choiceListCache;
         $registry = $this->registry;
         $propertyAccessor = $this->propertyAccessor;
         $type = $this;
@@ -121,7 +121,7 @@ abstract class DoctrineType extends AbstractType
                 $loaderHash,
                 $choiceHashes,
                 $preferredChoiceHashes,
-                $groupByHash
+                $groupByHash,
             )));
 
             if (!isset($choiceListCache[$hash])) {
@@ -143,6 +143,10 @@ abstract class DoctrineType extends AbstractType
         $emNormalizer = function (Options $options, $em) use ($registry) {
             /* @var ManagerRegistry $registry */
             if (null !== $em) {
+                if ($em instanceof ObjectManager) {
+                    return $em;
+                }
+
                 return $registry->getManager($em);
             }
 
@@ -150,7 +154,7 @@ abstract class DoctrineType extends AbstractType
 
             if (null === $em) {
                 throw new RuntimeException(sprintf(
-                    'Class "%s" seems not to be a managed Doctrine entity. ' .
+                    'Class "%s" seems not to be a managed Doctrine entity. '.
                     'Did you forget to map it?',
                     $options['class']
                 ));
@@ -160,13 +164,13 @@ abstract class DoctrineType extends AbstractType
         };
 
         $resolver->setDefaults(array(
-            'em'                => null,
-            'property'          => null,
-            'query_builder'     => null,
-            'loader'            => $loader,
-            'choices'           => null,
-            'choice_list'       => $choiceList,
-            'group_by'          => null,
+            'em' => null,
+            'property' => null,
+            'query_builder' => null,
+            'loader' => $loader,
+            'choices' => null,
+            'choice_list' => $choiceList,
+            'group_by' => null,
         ));
 
         $resolver->setRequired(array('class'));
@@ -176,6 +180,7 @@ abstract class DoctrineType extends AbstractType
         ));
 
         $resolver->setAllowedTypes(array(
+            'em' => array('null', 'string', 'Doctrine\Common\Persistence\ObjectManager'),
             'loader' => array('null', 'Symfony\Bridge\Doctrine\Form\ChoiceList\EntityLoaderInterface'),
         ));
     }

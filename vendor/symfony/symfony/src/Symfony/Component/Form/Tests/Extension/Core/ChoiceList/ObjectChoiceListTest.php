@@ -69,11 +69,11 @@ class ObjectChoiceListTest extends AbstractChoiceListTest
         $this->assertSame(array('0', '1', '2', '3'), $this->list->getValues());
         $this->assertEquals(array(
             'Group 1' => array(1 => new ChoiceView($this->obj2, '1', 'B')),
-            'Group 2' => array(2 => new ChoiceView($this->obj3, '2', 'C'))
+            'Group 2' => array(2 => new ChoiceView($this->obj3, '2', 'C')),
         ), $this->list->getPreferredViews());
         $this->assertEquals(array(
             'Group 1' => array(0 => new ChoiceView($this->obj1, '0', 'A')),
-            'Group 2' => array(3 => new ChoiceView($this->obj4, '3', 'D'))
+            'Group 2' => array(3 => new ChoiceView($this->obj4, '3', 'D')),
         ), $this->list->getRemainingViews());
     }
 
@@ -102,7 +102,7 @@ class ObjectChoiceListTest extends AbstractChoiceListTest
         $this->assertSame(array('0', '1', '2', '3', '4', '5'), $this->list->getValues());
         $this->assertEquals(array(
             'Group 1' => array(1 => new ChoiceView($this->obj2, '1', 'B')),
-            'Group 2' => array(2 => new ChoiceView($this->obj3, '2', 'C'))
+            'Group 2' => array(2 => new ChoiceView($this->obj3, '2', 'C')),
         ), $this->list->getPreferredViews());
         $this->assertEquals(array(
             'Group 1' => array(0 => new ChoiceView($this->obj1, '0', 'A')),
@@ -185,8 +185,10 @@ class ObjectChoiceListTest extends AbstractChoiceListTest
         );
     }
 
-    public function testGetIndicesForChoicesWithValuePath()
+    public function testLegacyGetIndicesForChoicesWithValuePath()
     {
+        $this->iniSet('error_reporting', -1 & ~E_USER_DEPRECATED);
+
         $this->list = new ObjectChoiceList(
             array($this->obj1, $this->obj2, $this->obj3, $this->obj4),
             'name',
@@ -200,8 +202,10 @@ class ObjectChoiceListTest extends AbstractChoiceListTest
         $this->assertSame(array($this->index1, $this->index2), $this->list->getIndicesForChoices($choices));
     }
 
-    public function testGetIndicesForChoicesWithValuePathPreservesKeys()
+    public function testLegacyGetIndicesForChoicesWithValuePathPreservesKeys()
     {
+        $this->iniSet('error_reporting', -1 & ~E_USER_DEPRECATED);
+
         $this->list = new ObjectChoiceList(
             array($this->obj1, $this->obj2, $this->obj3, $this->obj4),
             'name',
@@ -214,8 +218,10 @@ class ObjectChoiceListTest extends AbstractChoiceListTest
         $this->assertSame(array(5 => $this->index1, 8 => $this->index2), $this->list->getIndicesForChoices($choices));
     }
 
-    public function testGetIndicesForChoicesWithValuePathPreservesOrder()
+    public function testLegacyGetIndicesForChoicesWithValuePathPreservesOrder()
     {
+        $this->iniSet('error_reporting', -1 & ~E_USER_DEPRECATED);
+
         $this->list = new ObjectChoiceList(
             array($this->obj1, $this->obj2, $this->obj3, $this->obj4),
             'name',
@@ -228,8 +234,10 @@ class ObjectChoiceListTest extends AbstractChoiceListTest
         $this->assertSame(array($this->index2, $this->index1), $this->list->getIndicesForChoices($choices));
     }
 
-    public function testGetIndicesForChoicesWithValuePathIgnoresNonExistingChoices()
+    public function testLegacyGetIndicesForChoicesWithValuePathIgnoresNonExistingChoices()
     {
+        $this->iniSet('error_reporting', -1 & ~E_USER_DEPRECATED);
+
         $this->list = new ObjectChoiceList(
             array($this->obj1, $this->obj2, $this->obj3, $this->obj4),
             'name',

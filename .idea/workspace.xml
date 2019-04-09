@@ -16,6 +16,34 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="accion_tarea_operativa/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="cal_brechas_otros/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Green" />
+      <entry key="cal_control_calidad/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Green" />
+      <entry key="cal_control_tipo/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Green" />
+      <entry key="cal_ejecutor/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Green" />
+      <entry key="cal_plan_accion/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Green" />
+      <entry key="chequeo_tarea_operativa/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="email_address/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="email_modulo/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="email_users/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="estado_tarea_operativa/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="ind_arc/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Blue" />
+      <entry key="ind_criterio_medida/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Blue" />
+      <entry key="ind_evaluacion/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Blue" />
+      <entry key="ind_objetivo/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Blue" />
+      <entry key="ind_plan/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Blue" />
+      <entry key="ind_real/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Blue" />
+      <entry key="ind_tipo_objetivo/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Blue" />
+      <entry key="roles/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Violet" />
+      <entry key="tarea_operativa/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="tarea_operativa_trabajador/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Orange" />
+      <entry key="user_area/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Violet" />
+      <entry key="user_role/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Violet" />
+      <entry key="users/public/etecsa_cd_db/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a:table" value="Violet" />
+    </colors>
+  </component>
   <component name="DatabaseView">
     <option name="FLATTEN" value="false" />
     <option name="GROUP_BY_TYPE" value="true" />
@@ -52,21 +80,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EspecialistaViewport.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/app/view/transporte/EspecialistaViewport.js">
+      <file leaf-file-name="UserProvider.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/UserProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-              <folding />
+            <state vertical-scroll-proportion="-2.1711712">
+              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+              <folding>
+                <element signature="e#2688#2707#1#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sap_rh.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Resources/config/sap_rh.yml">
+      <file leaf-file-name="DATABASE/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros" pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros</OriginalElement>
+              <nodes>
+                <node x="37.0" y="0.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.unidad_organizativa</node>
+                <node x="112.0" y="369.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador</node>
+                <node x="497.0" y="614.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_plan_accion</node>
+                <node x="12.0" y="190.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.area</node>
+                <node x="152.0" y="190.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cargo</node>
+                <node x="171.5" y="658.5">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_ejecutor</node>
+                <node x="422.0" y="358.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros</node>
+                <node x="512.0" y="11.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_tipo</node>
+                <node x="292.0" y="179.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.departamento</node>
+                <node x="452.0" y="168.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_ejecutor" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros">
+                  <point x="40.5" y="-36.5" />
+                  <point x="293.0" y="589.0" />
+                  <point x="477.0" y="589.0" />
+                  <point x="-55.0" y="103.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_ejecutor" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador">
+                  <point x="-40.5" y="-36.5" />
+                  <point x="0.0" y="92.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_plan_accion" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros">
+                  <point x="0.0" y="-81.0" />
+                  <point x="55.0" y="103.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.area" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.unidad_organizativa">
+                  <point x="0.0" y="-48.0" />
+                  <point x="-35.0" y="59.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.area">
+                  <point x="-66.66666666666669" y="-92.0" />
+                  <point x="145.33333333333331" y="333.0" />
+                  <point x="72.0" y="333.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad">
+                  <point x="0.0" y="-103.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.unidad_organizativa">
+                  <point x="-40.0" y="-70.0" />
+                  <point x="492.0" y="143.0" />
+                  <point x="142.0" y="143.0" />
+                  <point x="35.0" y="59.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cargo">
+                  <point x="0.0" y="-92.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.departamento">
+                  <point x="66.66666666666669" y="-92.0" />
+                  <point x="278.6666666666667" y="333.0" />
+                  <point x="362.0" y="333.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_tipo">
+                  <point x="40.0" y="-70.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="153.5" y="179.5" />
+              <SelectedNodes>
+                <node>3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityAuthentication.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/SecurityAuthentication.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.319202">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="17" />
+            <state vertical-scroll-proportion="57.77778">
+              <caret line="4" column="52" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -84,56 +195,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="/html/index.php" />
-        <option value="$PROJECT_DIR$/web/css/symfony/configurator.css" />
-        <option value="$PROJECT_DIR$/web/config.php" />
-        <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/exception_full.html.twig" />
-        <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="C:/wamp/www/highcharts-export-clientside-1.1.3/example.html" />
-        <option value="$PROJECT_DIR$/src/Util/cURLBundle/Resources/File.php" />
-        <option value="C:/wamp/www/php/index1.php" />
-        <option value="$PROJECT_DIR$/src/Otros/NomencladorBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/Otros/NomencladorBundle/Services/SapRH.php" />
-        <option value="$PROJECT_DIR$/src/Seguridad/AdminBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/Util/cURLBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-        <option value="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-        <option value="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-        <option value="$PROJECT_DIR$/src/Util/cURLBundle/Controller/ChartExportController.php" />
-        <option value="$PROJECT_DIR$/src/Util/cURLBundle/Services/ChartExporting.php" />
-        <option value="$PROJECT_DIR$/web/js/ext-6.0.1/theme-triton/theme-triton-all.css" />
-        <option value="$PROJECT_DIR$/web/js/app/view/indicador/Viewport.js" />
-        <option value="$PROJECT_DIR$/src/Indicadores/IndicadorBundle/Resources/views/Indicador/index.html.twig" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/Viewport.js" />
-        <option value="$PROJECT_DIR$/web/css/all.css" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/especialista/ChartPanel.js" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/TareasMenu.js" />
-        <option value="$PROJECT_DIR$/app/Resources/views/ext-6.0.1.html.twig" />
-        <option value="$PROJECT_DIR$/src/Seguridad/AdminBundle/Resources/views/Portal/index.html.twig" />
-        <option value="$PROJECT_DIR$/web/js/vendor/ext-4.2.1/shared/Spotlight.js" />
-        <option value="$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Entity/TareaOperativaRepository.php" />
-        <option value="$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Controller/TareaOperativaController.php" />
-        <option value="$PROJECT_DIR$/web/js/app/store/tarea_operativa/especialista/PieChartStore.js" />
+        <option value="$PROJECT_DIR$/app/Resources/views/ext-6.2.0.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/app/model/ControlCalidadModel.js" />
+        <option value="$PROJECT_DIR$/web/js/app/model/PlanAccionModel.js" />
+        <option value="$PROJECT_DIR$/web/js/app/store/control_calidad/PlanAccionModel.js" />
+        <option value="$PROJECT_DIR$/web/js/app/store/control_calidad/ControlCalidadModel.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalPlanAccion.php" />
+        <option value="$PROJECT_DIR$/web/js/app/store/control_calidad/PlanAccionStore.js" />
+        <option value="$PROJECT_DIR$/src/Reportes/PDFBundle/Entity/Trabajador.php" />
+        <option value="$PROJECT_DIR$/src/Otros/NomencladorBundle/Entity/Trabajador.php" />
+        <option value="$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Entity/AccionTareaOperativa.php" />
         <option value="$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Entity/TareaOperativa.php" />
-        <option value="$PROJECT_DIR$/web/js/app/store/tarea_operativa/responsable/PieChartStore.js" />
-        <option value="$PROJECT_DIR$/web/js/app/controller/tarea_operativa/especialista/ViewportController.js" />
-        <option value="$PROJECT_DIR$/app/Resources/views/highcharts-4.1.9.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/ext-4.2.1.html.twig" />
-        <option value="$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Resources/views/TareaOperativa/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Services/Util.php" />
-        <option value="$PROJECT_DIR$/src/Otros/NomencladorBundle/Services/Util.php" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/responsable/ChartPanel.js" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/especialista/chart/PieChart.js" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/responsable/chart/PieChart.js" />
-        <option value="$PROJECT_DIR$/web/js/app/store/tarea_operativa/especialista/BarChartStore.js" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/especialista/chart/BarChart.js" />
-        <option value="$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Controller/ChartController.php" />
-        <option value="$PROJECT_DIR$/web/js/app/store/tarea_operativa/responsable/BarChartStore.js" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/responsable/chart/BarChart.js" />
-        <option value="$PROJECT_DIR$/web/js/app/controller/tarea_operativa/responsable/ViewportController.js" />
-        <option value="$PROJECT_DIR$/web/js/app/view/tarea_operativa/especialista/accion/AccionForm.js" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Resources/config/validation.yml" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalBrechasOtros.php" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/admin/AdminController.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/PlanAccionGrid.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalControlCalidad.php" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ContolGrid.js" />
+        <option value="$PROJECT_DIR$/web/js/app/store/control_calidad/ControlStore.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlCalidadForm.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/PlanAccionForm.js" />
+        <option value="$PROJECT_DIR$/web/css/control_calidad/icons.css" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlCalidadGrid.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlGrid.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalControlTipo.php" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/ControlTipoController.php" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/PlanAccionGridController.js" />
+        <option value="$PROJECT_DIR$/web/js/app/store/control_calidad/ControlTipoStore.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlTipoGrid.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlForm.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlTipoForm.js" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlTipoController.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/Viewport.js" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ViewportController.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/ControlController.php" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlController.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/PlanAccionController.php" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/PlanAccionController.js" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/Viewport.js" />
+        <option value="$PROJECT_DIR$/src/Seguridad/AdminBundle/Resources/config/roles.yml" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlCalidadFormController.js" />
+        <option value="$PROJECT_DIR$/web/js/app/store/control_calidad/ControlCalidadStore.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Resources/views/ControlCalidad/index.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/app/view/control_calidad/responsable/Viewport.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalBrechasOtrosRepository.php" />
+        <option value="$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlCalidadGridController.js" />
+        <option value="$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/ControlCalidadController.php" />
+        <option value="$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/Util.php" />
+        <option value="$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/SecurityAuthentication.php" />
         <option value="$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/UserProvider.php" />
       </list>
     </option>
@@ -154,8 +265,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -181,6 +292,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,7 +385,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="transporte" />
+              <option name="myItemId" value="tarea_operativa" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,6 +410,168 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="control_calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="responsable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="control_calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="especialista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="store" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="control_calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="control_calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="especialista" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -337,7 +611,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Otros" />
+              <option name="myItemId" value="Seguridad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,11 +633,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Otros" />
+              <option name="myItemId" value="Seguridad" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NomencladorBundle" />
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Security" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,11 +659,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Otros" />
+              <option name="myItemId" value="Calidad" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NomencladorBundle" />
+              <option name="myItemId" value="CalidadBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalidadBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -389,7 +693,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ControlCalidad" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,20 +711,83 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalidadBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalidadBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PCDT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Calidad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalidadBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Aplicaciones/Desarrollo/phpStorm/postgresql-9.4-1201.jdbc4.jar" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
@@ -426,18 +797,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/js/app/view/tarea_operativa/responsable/chart" />
-      <recent name="$PROJECT_DIR$/app/Resources/views" />
-      <recent name="E:\Frank\www\proyects\PCDT\web\js\app\view\tarea_operativa\responsable" />
-      <recent name="E:\Frank\www\proyects\PCDT\web\js\app\store\tarea_operativa\responsable" />
-      <recent name="E:\Frank\www\proyects\PCDT\src\Otros\TareaOperativaBundle\Controller" />
+      <recent name="D:\Proyectos\PCDT\src\Calidad\CalidadBundle\Controller" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\view\control_calidad\responsable" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\view\control_calidad\especialista" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\controller\control_calidad\especialista" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\store\control_calidad" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Frank\www\proyects\PCDT\web\js\vendor" />
-      <recent name="E:\Frank\www\proyects\PCDT\web\images" />
-      <recent name="E:\Frank\www\proyects\PCDT\web\css\symfony" />
-      <recent name="E:\Frank\Proyectos\PCDT\web\font" />
-      <recent name="E:\Frank\Proyectos\PCDT\web\js\app\controller\tarea_operativa\responsable" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\view\control_calidad\especialista" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\controller\control_calidad\especialista" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\controller\control_calidad" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\view\control_calidad" />
+      <recent name="D:\Proyectos\PCDT\web\js\app\store\control_calidad" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Web Application.Symfony PCDT">
@@ -491,52 +862,51 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25945538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20735608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3402778" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33955225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4117647" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48154363" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20673077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4117647" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19296375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Symfony2" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33974358" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34039333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -552,367 +922,470 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Transporte/CirculacionEventualBundle/Entity/CirculacionEventual.php">
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/indicador/especialista/arc/ArcGrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d78c3d17/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a/etecsa_cd_db.public.cal_control_tipo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/store/indicador/ArcStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17316018">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/control_calidad/icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/PlanAccionForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20779221">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalControlCalidad.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24774775">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="173" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/store/control_calidad/ControlStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalControlTipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.36111">
+          <caret line="105" column="24" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/admin/area/AreaGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="13" selection-start-line="33" selection-start-column="12" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/store/control_calidad/ControlTipoStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlCalidadForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.034632035">
+          <caret line="39" column="43" selection-start-line="36" selection-start-column="24" selection-end-line="39" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/admin/area/AreaForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="33" selection-start-line="27" selection-start-column="16" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2034632">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlTipoForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlTipoGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="65" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d78c3d17/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a/etecsa_cd_db.public.cal_control_calidad">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d78c3d17/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a/etecsa_cd_db.public.cal_brechas_otros">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ViewportController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="91" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlTipoController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.2900434">
+          <caret line="107" column="38" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Controller/CargoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7567568">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Controller/AreaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.117117114">
+          <caret line="34" column="173" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Controller/TrabajadorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.9189188">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Services/Util.php">
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93073595">
+          <caret line="62" column="39" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/PlanAccionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="46" />
+          <caret line="25" column="111" selection-start-line="25" selection-start-column="111" selection-end-line="25" selection-end-column="111" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Resources/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/web/js/app/store/control_calidad/PlanAccionStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="29" />
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/UserProvider.php">
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/ControlCalidadGrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="11" selection-start-line="29" selection-start-column="12" selection-end-line="58" selection-end-column="11" />
+          <caret line="72" column="90" selection-start-line="72" selection-start-column="90" selection-end-line="72" selection-end-column="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Session/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.346915">
-          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Controller/EmailController.php">
+    <entry file="file://$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/PlanAccionController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Controller/IndexTareaOperativaController.php">
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/PlanAccionGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.034632035">
+          <caret line="1" column="49" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/especialista/Viewport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Controller/ResponsableController.php">
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/ControlController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.7777778">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/js/app/store/control_calidad/ControlCalidadStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43639576">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.3809524">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/ext-4.2.1.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/ControlTipoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50353354">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Controller/TareaOperativaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.678571">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transporte/TransporteBundle/Entity/VehiculoRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9134276">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transporte/TransporteBundle/Entity/MatriculaRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.94699645">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transporte/TransporteBundle/Entity/ChoferRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9540637">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util/cURLBundle/Services/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.40282685">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transporte/TransporteBundle/Services/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Entity/UsersRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3180213">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Entity/DepartamentoRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.94699645">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Entity/TrabajadorRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3710246">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Entity/AccionTareaOperativaRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5441696">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/date.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34982333">
-          <caret line="455" column="9" selection-start-line="455" selection-start-column="9" selection-end-line="455" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45053002">
-          <caret line="1053" column="9" selection-start-line="1053" selection-start-column="9" selection-end-line="1053" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Services/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7650177">
-          <caret line="93" column="5" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Entity/TareaOperativa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.857143">
-          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/view/tarea_operativa/especialista/chart/PieChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="99" selection-start-line="33" selection-start-column="99" selection-end-line="33" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/store/tarea_operativa/especialista/PieChartStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Entity/TareaOperativaRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24911661">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_9.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18197879">
-          <caret line="710" column="63" selection-start-line="710" selection-start-column="9" selection-end-line="710" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/store/tarea_operativa/especialista/BarChartStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/controller/tarea_operativa/especialista/ViewportController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41582492">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Resources/views/TareaOperativa/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.892857">
-          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/view/tarea_operativa/especialista/chart/BarChart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="119" selection-start-line="56" selection-start-column="20" selection-end-line="57" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/view/tarea_operativa/especialista/accion/AccionForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67171717">
-          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/controller/tarea_operativa/responsable/ViewportController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41582492">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Resources/views/Secured/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6785714">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Resources/views/Portal/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Resources/config/ldap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/UserProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="11" selection-start-line="29" selection-start-column="12" selection-end-line="58" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/ExceptionListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="53" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Controller/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2782931">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.4054054">
+          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="44" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.7229437">
+          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Controller/SecuredController.php">
+    <entry file="file://$PROJECT_DIR$/src/Otros/TareaOperativaBundle/Controller/IndexTareaOperativaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="10.666667">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.333333">
+          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Resources/views/ControlCalidad/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.888889">
+          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/view/control_calidad/responsable/Viewport.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalBrechasOtros.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.666667">
+          <caret line="87" column="23" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Entity/CalBrechasOtrosRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.555555">
+          <caret line="32" column="109" selection-start-line="32" selection-start-column="109" selection-end-line="32" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Session/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6261261">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Resources/config/roles.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="107" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Security/Core/SecurityContext.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlCalidadGridController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="144" column="33" selection-start-line="144" selection-start-column="33" selection-end-line="144" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlCalidadFormController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/app/controller/control_calidad/especialista/ControlController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="60" selection-start-line="69" selection-start-column="60" selection-end-line="69" selection-end-column="60" />
+          <folding>
+            <marker date="1491960172077" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1491960172077" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calidad/CalidadBundle/Controller/ControlCalidadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8085586">
+          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/ExceptionListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.033760186">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/Util.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325301">
+          <caret line="66" column="77" selection-start-line="66" selection-start-column="77" selection-end-line="66" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/SecurityAuthentication.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transporte/CirculacionEventualBundle/Entity/CirculacionEventual.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12666667">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Services/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="42" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Controller/AreaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/app/view/transporte/EspecialistaViewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        <state vertical-scroll-proportion="57.77778">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Otros/NomencladorBundle/Resources/config/sap_rh.yml">
+    <entry file="uml://DATABASE/3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros</OriginalElement>
+          <nodes>
+            <node x="37.0" y="0.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.unidad_organizativa</node>
+            <node x="112.0" y="369.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador</node>
+            <node x="497.0" y="614.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_plan_accion</node>
+            <node x="12.0" y="190.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.area</node>
+            <node x="152.0" y="190.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cargo</node>
+            <node x="171.5" y="658.5">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_ejecutor</node>
+            <node x="422.0" y="358.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros</node>
+            <node x="512.0" y="11.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_tipo</node>
+            <node x="292.0" y="179.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.departamento</node>
+            <node x="452.0" y="168.0">3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_ejecutor" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros">
+              <point x="40.5" y="-36.5" />
+              <point x="293.0" y="589.0" />
+              <point x="477.0" y="589.0" />
+              <point x="-55.0" y="103.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_ejecutor" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador">
+              <point x="-40.5" y="-36.5" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_plan_accion" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros">
+              <point x="0.0" y="-81.0" />
+              <point x="55.0" y="103.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.area" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.unidad_organizativa">
+              <point x="0.0" y="-48.0" />
+              <point x="-35.0" y="59.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.area">
+              <point x="-66.66666666666669" y="-92.0" />
+              <point x="145.33333333333331" y="333.0" />
+              <point x="72.0" y="333.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad">
+              <point x="0.0" y="-103.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.unidad_organizativa">
+              <point x="-40.0" y="-70.0" />
+              <point x="492.0" y="143.0" />
+              <point x="142.0" y="143.0" />
+              <point x="35.0" y="59.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cargo">
+              <point x="0.0" y="-92.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.trabajador" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.departamento">
+              <point x="66.66666666666669" y="-92.0" />
+              <point x="278.6666666666667" y="333.0" />
+              <point x="362.0" y="333.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_calidad" target="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_control_tipo">
+              <point x="40.0" y="-70.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="153.5" y="179.5" />
+          <SelectedNodes>
+            <node>3b38925c-bc91-4bc2-89d9-ebcb9972ad8a.table:etecsa_cd_db.public.cal_brechas_otros</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Seguridad/AdminBundle/Security/UserProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.319202">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="-2.1711712">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <element signature="e#2688#2707#1#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

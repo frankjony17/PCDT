@@ -11,15 +11,17 @@
         <parameter key="validator.mapping.cache.apc.class">Symfony\Component\Validator\Mapping\Cache\ApcCache</parameter>
         <parameter key="validator.mapping.cache.prefix" />
         <parameter key="validator.validator_factory.class">Symfony\Bundle\FrameworkBundle\Validator\ConstraintValidatorFactory</parameter>
-        <parameter key="validator.legacy_validator_factory.class">Symfony\Bundle\FrameworkBundle\Validator\LegacyConstraintValidatorFactory</parameter>
         <parameter key="validator.expression.class">Symfony\Component\Validator\Constraints\ExpressionValidator</parameter>
         <parameter key="validator.email.class">Symfony\Component\Validator\Constraints\EmailValidator</parameter>
     </parameters>
 
     <services>
-        <service id="validator" class="%validator.class%" factory-service="validator.builder" factory-method="getValidator" />
+        <service id="validator" class="%validator.class%">
+            <factory service="validator.builder" method="getValidator" />
+        </service>
 
-        <service id="validator.builder" class="%validator.builder.class%" factory-class="%validator.builder.factory.class%" factory-method="createValidatorBuilder">
+        <service id="validator.builder" class="%validator.builder.class%">
+            <factory class="%validator.builder.factory.class%" method="createValidatorBuilder" />
             <call method="setConstraintValidatorFactory">
                 <argument type="service" id="validator.validator_factory" />
             </call>

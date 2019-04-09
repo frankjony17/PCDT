@@ -10,10 +10,8 @@ Ext.define('CDT.controller.admin.AdminController', {
         'admin.users.UsersEditForm'
     ],
 
-    init: function()
-    {  
+    init: function() {
         var me = this;
-        
         me.control({
             'rolesGrid': {
                 resize: me.resize

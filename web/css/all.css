@@ -83,3 +83,5 @@
 .admin-app {
     background-image : url(/images/admin-app.png) !important;
 }
+
+.delete-row:before{font:16px/1 FontAwesome;color:#dd6550;content:"\f1f8"}

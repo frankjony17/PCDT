@@ -73,9 +73,32 @@ class Trabajador
     private $departamento;
 
     /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="\Calidad\CalidadBundle\Entity\CalBrechasOtros", inversedBy="trabajador")
+     * @ORM\JoinTable(name="cal_ejecutor",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="trabajador_id", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="brechas_otros_id", referencedColumnName="id")
+     *   }
+     * )
+     */
+    private $brechasOtros;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->brechasOtros = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -98,7 +121,7 @@ class Trabajador
     /**
      * Get numeroPlaza
      *
-     * @return string 
+     * @return string
      */
     public function getNumeroPlaza()
     {
@@ -121,7 +144,7 @@ class Trabajador
     /**
      * Get nombreApellidos
      *
-     * @return string 
+     * @return string
      */
     public function getNombreApellidos()
     {
@@ -144,7 +167,7 @@ class Trabajador
     /**
      * Get movil
      *
-     * @return string 
+     * @return string
      */
     public function getMovil()
     {
@@ -167,7 +190,7 @@ class Trabajador
     /**
      * Get area
      *
-     * @return \Otros\NomencladorBundle\Entity\Area 
+     * @return \Otros\NomencladorBundle\Entity\Area
      */
     public function getArea()
     {
@@ -190,7 +213,7 @@ class Trabajador
     /**
      * Get cargo
      *
-     * @return \Otros\NomencladorBundle\Entity\Cargo 
+     * @return \Otros\NomencladorBundle\Entity\Cargo
      */
     public function getCargo()
     {
@@ -213,18 +236,18 @@ class Trabajador
     /**
      * Get departamento
      *
-     * @return \Otros\NomencladorBundle\Entity\Departamento 
+     * @return \Otros\NomencladorBundle\Entity\Departamento
      */
     public function getDepartamento()
     {
         return $this->departamento;
     }
-    
+
     /**
      * Get Array Row
      *
-     * @return array 
-     */     
+     * @return array
+     */
     public function toArray()
     {
         return array (
@@ -236,5 +259,38 @@ class Trabajador
             'area' => $this->getArea() ? $this->getArea()->getNombre() : 'Sin asignar.',
             'departamento' => $this->getDepartamento()->getNombre()
         );
-    }    
+    }
+
+    /**
+     * Add brechasOtros
+     *
+     * @param \Calidad\CalidadBundle\Entity\CalBrechasOtros $brechasOtros
+     * @return Trabajador
+     */
+    public function addBrechasOtro(\Calidad\CalidadBundle\Entity\CalBrechasOtros $brechasOtros)
+    {
+        $this->brechasOtros[] = $brechasOtros;
+
+        return $this;
+    }
+
+    /**
+     * Remove brechasOtros
+     *
+     * @param \Calidad\CalidadBundle\Entity\CalBrechasOtros $brechasOtros
+     */
+    public function removeBrechasOtro(\Calidad\CalidadBundle\Entity\CalBrechasOtros $brechasOtros)
+    {
+        $this->brechasOtros->removeElement($brechasOtros);
+    }
+
+    /**
+     * Get brechasOtros
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getBrechasOtros()
+    {
+        return $this->brechasOtros;
+    }
 }

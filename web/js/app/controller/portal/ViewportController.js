@@ -33,6 +33,16 @@ Ext.define('CDT.controller.portal.ViewportController', {
                 mouseover: me.mouseOver,
                 mouseout: me.mouseOut
             },
+            '#portal-control-calidad-button': {
+                click: me.showLogin,
+                mouseover: me.mouseOver,
+                mouseout: me.mouseOut
+            },
+            '#portal-control-calidad-button': {
+                click: me.showLogin,
+                mouseover: me.mouseOver,
+                mouseout: me.mouseOut
+            },
             '#portal-login-btn-ok': {
                 click: me.validate,
                 mouseover: me.loginBtnOver,

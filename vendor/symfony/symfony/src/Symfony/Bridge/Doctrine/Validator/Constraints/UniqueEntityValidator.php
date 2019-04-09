@@ -29,9 +29,6 @@ class UniqueEntityValidator extends ConstraintValidator
      */
     private $registry;
 
-    /**
-     * @param ManagerRegistry $registry
-     */
     public function __construct(ManagerRegistry $registry)
     {
         $this->registry = $registry;
@@ -68,7 +65,7 @@ class UniqueEntityValidator extends ConstraintValidator
             $em = $this->registry->getManager($constraint->em);
 
             if (!$em) {
-               throw new ConstraintDefinitionException(sprintf('Object manager "%s" does not exist.', $constraint->em));
+                throw new ConstraintDefinitionException(sprintf('Object manager "%s" does not exist.', $constraint->em));
             }
         } else {
             $em = $this->registry->getManagerForClass(get_class($entity));
@@ -105,7 +102,7 @@ class UniqueEntityValidator extends ConstraintValidator
 
                 if (count($relatedId) > 1) {
                     throw new ConstraintDefinitionException(
-                        "Associated entities are not allowed to have more than one identifier field to be " .
+                        "Associated entities are not allowed to have more than one identifier field to be ".
                         "part of a unique constraint in: ".$class->getName()."#".$fieldName
                     );
                 }
@@ -136,6 +133,9 @@ class UniqueEntityValidator extends ConstraintValidator
 
         $errorPath = null !== $constraint->errorPath ? $constraint->errorPath : $fields[0];
 
-        $this->context->addViolationAt($errorPath, $constraint->message, array(), $criteria[$fields[0]]);
+        $this->buildViolation($constraint->message)
+            ->atPath($errorPath)
+            ->setInvalidValue($criteria[$fields[0]])
+            ->addViolation();
     }
 }

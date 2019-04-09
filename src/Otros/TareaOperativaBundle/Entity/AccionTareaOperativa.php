@@ -3,7 +3,6 @@
 namespace Otros\TareaOperativaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints\False;
 
 /**
  * AccionTareaOperativa
@@ -135,7 +134,7 @@ class AccionTareaOperativa
     {
         $responsables = $this->getTareaOperativa()->getAreaResponsableAndTrabajadorId(); $tarea = ""; $estado = "";
 
-        if ($bool === FALSE)
+        if ($bool === false)
         {
             $stado =  $this->getTareaOperativa()->getLastEstadoTareaOperativa();
             $tarea = $this->getTareaOperativa()->getNumeroTarea() ." <=> ". $this->getString() ."... <=> ". $this->getTareaOperativa()->getFechaCreacion()->format("Y-m-d") ." - ". $stado[0]->format("Y-m-d");

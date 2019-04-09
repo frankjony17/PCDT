@@ -4,7 +4,6 @@ namespace Otros\TareaOperativaBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints\DateTime;
-use Symfony\Component\Validator\Constraints\False;
 
 /**
  * TareaOperativa
@@ -437,7 +436,7 @@ class TareaOperativa
             }
             return array($html .= '</tbody></table></div></th></tr></table>', $temp);
         }
-        return array("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Acciones: 0</b>", FALSE);
+        return array("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Acciones: 0</b>", false);
     }
     
     /**
@@ -474,7 +473,7 @@ class TareaOperativa
 
         if (count($action_tarea_operativa) > 0)
         {
-            $count > count($action_tarea_operativa) ? $count = count($action_tarea_operativa) : FALSE;
+            $count > count($action_tarea_operativa) ? $count = count($action_tarea_operativa) : false;
 
             for ($i = 0; $i < $count; $i++)
             {

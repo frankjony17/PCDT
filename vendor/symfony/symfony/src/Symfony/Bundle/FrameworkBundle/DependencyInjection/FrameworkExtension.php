@@ -14,6 +14,7 @@ namespace Symfony\Bundle\FrameworkBundle\DependencyInjection;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\DefinitionDecorator;
+use Symfony\Component\DependencyInjection\Exception\LogicException;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\Config\Resource\FileResource;
@@ -56,21 +57,6 @@ class FrameworkExtension extends Extension
         // Property access is used by both the Form and the Validator component
         $loader->load('property_access.xml');
 
-        $loader->load('debug_prod.xml');
-
-        if ($container->getParameter('kernel.debug')) {
-            $loader->load('debug.xml');
-
-            $definition = $container->findDefinition('http_kernel');
-            $definition->replaceArgument(2, new Reference('debug.controller_resolver'));
-
-            // replace the regular event_dispatcher service with the debug one
-            $definition = $container->findDefinition('event_dispatcher');
-            $definition->setPublic(false);
-            $container->setDefinition('debug.event_dispatcher.parent', $definition);
-            $container->setAlias('event_dispatcher', 'debug.event_dispatcher');
-        }
-
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
 
@@ -103,6 +89,10 @@ class FrameworkExtension extends Extension
             $this->registerFormConfiguration($config, $container, $loader);
             $config['validation']['enabled'] = true;
 
+            if (!class_exists('Symfony\Component\Validator\Validator')) {
+                throw new LogicException('The Validator component is required to use the Form component.');
+            }
+
             if ($this->isConfigEnabled($container, $config['form']['csrf_protection'])) {
                 $config['csrf_protection']['enabled'] = true;
             }
@@ -116,6 +106,7 @@ class FrameworkExtension extends Extension
 
         $this->registerValidationConfiguration($config['validation'], $container, $loader);
         $this->registerEsiConfiguration($config['esi'], $container, $loader);
+        $this->registerSsiConfiguration($config['ssi'], $container, $loader);
         $this->registerFragmentsConfiguration($config['fragments'], $container, $loader);
         $this->registerProfilerConfiguration($config['profiler'], $container, $loader);
         $this->registerTranslatorConfiguration($config['translator'], $container);
@@ -126,12 +117,38 @@ class FrameworkExtension extends Extension
 
         $this->registerAnnotationsConfiguration($config['annotations'], $container, $loader);
 
+        $this->registerPropertyAccessConfiguration($config['property_access'], $container);
+
         if (isset($config['serializer']) && $config['serializer']['enabled']) {
             $loader->load('serializer.xml');
         }
 
+        $loader->load('debug_prod.xml');
+        $definition = $container->findDefinition('debug.debug_handlers_listener');
+
+        if ($container->hasParameter('templating.helper.code.file_link_format')) {
+            $definition->replaceArgument(5, '%templating.helper.code.file_link_format%');
+        }
+
+        if ($container->getParameter('kernel.debug')) {
+            $loader->load('debug.xml');
+
+            $definition = $container->findDefinition('http_kernel');
+            $definition->replaceArgument(2, new Reference('debug.controller_resolver'));
+
+            // replace the regular event_dispatcher service with the debug one
+            $definition = $container->findDefinition('event_dispatcher');
+            $definition->setPublic(false);
+            $container->setDefinition('debug.event_dispatcher.parent', $definition);
+            $container->setAlias('event_dispatcher', 'debug.event_dispatcher');
+        } else {
+            $definition->replaceArgument(2, E_COMPILE_ERROR | E_PARSE | E_ERROR | E_CORE_ERROR);
+        }
+
         $this->addClassesToCompile(array(
             'Symfony\\Component\\Config\\FileLocator',
+
+            'Symfony\\Component\\Debug\\ErrorHandler',
 
             'Symfony\\Component\\EventDispatcher\\Event',
             'Symfony\\Component\\EventDispatcher\\ContainerAwareEventDispatcher',
@@ -153,6 +170,14 @@ class FrameworkExtension extends Extension
             // Cannot be included because annotations will parse the big compiled class file
             // 'Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller',
         ));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getConfiguration(array $config, ContainerBuilder $container)
+    {
+        return new Configuration($container->getParameter('kernel.debug'));
     }
 
     /**
@@ -203,6 +228,22 @@ class FrameworkExtension extends Extension
     }
 
     /**
+     * Loads the SSI configuration.
+     *
+     * @param array            $config    An SSI configuration array
+     * @param ContainerBuilder $container A ContainerBuilder instance
+     * @param XmlFileLoader    $loader    An XmlFileLoader instance
+     */
+    private function registerSsiConfiguration(array $config, ContainerBuilder $container, XmlFileLoader $loader)
+    {
+        if (!$this->isConfigEnabled($container, $config)) {
+            return;
+        }
+
+        $loader->load('ssi.xml');
+    }
+
+    /**
      * Loads the fragments configuration.
      *
      * @param array            $config    A fragments configuration array
@@ -249,15 +290,15 @@ class FrameworkExtension extends Extension
 
         // Choose storage class based on the DSN
         $supported = array(
-            'sqlite'    => 'Symfony\Component\HttpKernel\Profiler\SqliteProfilerStorage',
-            'mysql'     => 'Symfony\Component\HttpKernel\Profiler\MysqlProfilerStorage',
-            'file'      => 'Symfony\Component\HttpKernel\Profiler\FileProfilerStorage',
-            'mongodb'   => 'Symfony\Component\HttpKernel\Profiler\MongoDbProfilerStorage',
-            'memcache'  => 'Symfony\Component\HttpKernel\Profiler\MemcacheProfilerStorage',
+            'sqlite' => 'Symfony\Component\HttpKernel\Profiler\SqliteProfilerStorage',
+            'mysql' => 'Symfony\Component\HttpKernel\Profiler\MysqlProfilerStorage',
+            'file' => 'Symfony\Component\HttpKernel\Profiler\FileProfilerStorage',
+            'mongodb' => 'Symfony\Component\HttpKernel\Profiler\MongoDbProfilerStorage',
+            'memcache' => 'Symfony\Component\HttpKernel\Profiler\MemcacheProfilerStorage',
             'memcached' => 'Symfony\Component\HttpKernel\Profiler\MemcachedProfilerStorage',
-            'redis'     => 'Symfony\Component\HttpKernel\Profiler\RedisProfilerStorage',
+            'redis' => 'Symfony\Component\HttpKernel\Profiler\RedisProfilerStorage',
         );
-        list($class, ) = explode(':', $config['dsn'], 2);
+        list($class,) = explode(':', $config['dsn'], 2);
         if (!isset($supported[$class])) {
             throw new \LogicException(sprintf('Driver "%s" is not supported for the profiler.', $class));
         }
@@ -420,9 +461,9 @@ class FrameworkExtension extends Extension
 
         $links = array(
             'textmate' => 'txmt://open?url=file://%%f&line=%%l',
-            'macvim'   => 'mvim://open?url=file://%%f&line=%%l',
-            'emacs'    => 'emacs://open?url=file://%file&line=%line',
-            'sublime'  => 'subl://open?url=file://%file&line=%line',
+            'macvim' => 'mvim://open?url=file://%%f&line=%%l',
+            'emacs' => 'emacs://open?url=file://%%f&line=%%l',
+            'sublime' => 'subl://open?url=file://%%f&line=%%l',
         );
 
         $container->setParameter('templating.helper.code.file_link_format', isset($links[$ide]) ? $links[$ide] : $ide);
@@ -458,19 +499,6 @@ class FrameworkExtension extends Extension
             new Reference('templating.asset.default_package'),
             $namedPackages,
         ));
-
-        // Apply request scope to assets helper if one or more packages are request-scoped
-        $requireRequestScope = array_reduce(
-            $namedPackages,
-            function ($v, Reference $ref) use ($container) {
-                return $v || 'request' === $container->getDefinition($ref)->getScope();
-            },
-            'request' === $defaultPackage->getScope()
-        );
-
-        if ($requireRequestScope) {
-            $container->getDefinition('templating.helper.assets')->setScope('request');
-        }
 
         if (!empty($config['loaders'])) {
             $loaders = array_map(function ($loader) { return new Reference($loader); }, $config['loaders']);
@@ -610,6 +638,8 @@ class FrameworkExtension extends Extension
         }
         $translator->addMethodCall('setFallbackLocales', array($config['fallback']));
 
+        $container->setParameter('translator.logging', $config['logging']);
+
         // Discover translation directories
         $dirs = array();
         if (class_exists('Symfony\Component\Validator\Validator')) {
@@ -711,25 +741,29 @@ class FrameworkExtension extends Extension
                 'validator_'.hash('sha256', $container->getParameter('kernel.root_dir'))
             );
 
-            $validatorBuilder->addMethodCall('setMetadataCache', array(new Reference('validator.mapping.cache.'.$config['cache'])));
+            $validatorBuilder->addMethodCall('setMetadataCache', array(new Reference($config['cache'])));
         }
 
-        if ('auto' !== $config['api']) {
-            switch ($config['api']) {
-                case '2.4':
-                    $api = Validation::API_VERSION_2_4;
-                    $container->setParameter('validator.validator_factory.class', $container->getParameter('validator.legacy_validator_factory.class'));
-                    break;
-                case '2.5':
-                    $api = Validation::API_VERSION_2_5;
-                    break;
-                default:
-                    $api = Validation::API_VERSION_2_5_BC;
-                    break;
-            }
-
-            $validatorBuilder->addMethodCall('setApiVersion', array($api));
+        switch ($config['api']) {
+            case '2.4':
+                $api = Validation::API_VERSION_2_4;
+                break;
+            case '2.5':
+                $api = Validation::API_VERSION_2_5;
+                // the validation class needs to be changed only for the 2.5 api since the deprecated interface is
+                // set as the default interface
+                $container->setParameter('validator.class', 'Symfony\Component\Validator\Validator\ValidatorInterface');
+                break;
+            default:
+                $api = Validation::API_VERSION_2_5_BC;
+                break;
         }
+
+        $validatorBuilder->addMethodCall('setApiVersion', array($api));
+
+        // You can use this parameter to check the API version in your own
+        // bundle extension classes
+        $container->setParameter('validator.api', $api);
     }
 
     private function getValidatorXmlMappingFiles(ContainerBuilder $container)
@@ -792,6 +826,15 @@ class FrameworkExtension extends Extension
             ;
             $container->setAlias('annotation_reader', 'annotations.cached_reader');
         }
+    }
+
+    private function registerPropertyAccessConfiguration(array $config, ContainerBuilder $container)
+    {
+        $container
+            ->getDefinition('property_accessor')
+            ->replaceArgument(0, $config['magic_call'])
+            ->replaceArgument(1, $config['throw_exception_on_invalid_index'])
+        ;
     }
 
     /**

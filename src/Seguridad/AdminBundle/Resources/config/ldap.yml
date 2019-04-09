@@ -1,5 +1,5 @@
 # LDAP CONFIG
-host: ldap://ds.etecsa.cu/
+host: ldap://192.168.91.114/
 port: 389
 basedn: ou=etecsa.cu,ou=people,dc=etecsa,dc=cu
 ou: ou=DTIJ

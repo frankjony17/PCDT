@@ -54,7 +54,7 @@
         <argument type="service" id="foobaz" on-invalid="ignore"/>
       </call>
       <call method="setBar">
-        <argument type="expression">service("foo").foo() ~ parameter("foo")</argument>
+        <argument type="expression">service("foo").foo() ~ (container.hasparameter("foo") ? parameter("foo") : "default")</argument>
       </call>
     </service>
     <service id="factory_service" class="Bar" factory-method="getInstance" factory-service="foo.baz"/>
@@ -91,6 +91,16 @@
     <service id="decorated" class="stdClass"/>
     <service id="decorator_service" class="stdClass" decorates="decorated"/>
     <service id="decorator_service_with_name" class="stdClass" decorates="decorated" decoration-inner-name="decorated.pif-pouf"/>
+    <service id="new_factory" class="FactoryClass" public="false">
+      <property name="foo">bar</property>
+    </service>
+    <service id="new_factory_service" class="FooBarBaz">
+      <property name="foo">bar</property>
+      <factory service="new_factory" method="getInstance"/>
+    </service>
+    <service id="service_from_static_method" class="Bar\FooClass">
+      <factory class="Bar\FooClass" method="getInstance"/>
+    </service>
     <service id="alias_for_foo" alias="foo"/>
     <service id="alias_for_alias" alias="foo"/>
   </services>

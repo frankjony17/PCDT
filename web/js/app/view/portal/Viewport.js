@@ -69,6 +69,12 @@ Ext.define('CDT.view.portal.Viewport', {
                 name: 'tareasoperativas'
             },{
                 xtype: 'button',
+                text: me.controlCalidadHtml(),
+                cls: 'x-btn-color',
+                id: 'portal-control-calidad-button',
+                name: 'controlcalidad'
+            },{
+                xtype: 'button',
                 text: me.indicadorHtml(),
                 cls: 'x-btn-color',
                 id: 'portal-indicadores-button',
@@ -168,6 +174,30 @@ Ext.define('CDT.view.portal.Viewport', {
             '</tr>'+
         '</table>';        
     },
+    controlCalidadHtml: function ()
+    {
+        return '<table>'+
+            '<tr>'+
+                '<th>'+
+                    //'<img src="/images/portal/indicadores.png" width=145>'+
+                '</th>'+
+            '</tr>'+
+            '<tr>'+
+                '<th width=50>'+
+                    '<div class="x-btn-color-html">'+
+                        'CONTROL CALIDAD.'+
+                    '</div>'+
+                    '<div class="x-btn-color-html-desc">'+
+                        'En DESARROLLO!!!.'+
+                    '</div>'+
+                '</th>'+
+            '</tr>'+
+            '<tr>'+
+                '<th height=120>'+
+                '</th>'+
+            '</tr>'+
+        '</table>';        
+    },
     indicadorHtml: function ()
     {
         return '<table>'+
@@ -190,7 +220,7 @@ Ext.define('CDT.view.portal.Viewport', {
                 '<th height=120>'+
                 '</th>'+
             '</tr>'+
-        '</table>';        
+        '</table>';
     },
     nbsp: function (num)
     {   

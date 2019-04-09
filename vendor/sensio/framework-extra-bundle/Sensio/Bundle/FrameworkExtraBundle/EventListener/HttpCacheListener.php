@@ -89,16 +89,29 @@ class HttpCacheListener implements EventSubscriberInterface
 
         $response = $event->getResponse();
 
-        if (!in_array($response->getStatusCode(), array(200, 203, 300, 301, 302, 404, 410))) {
+        // http://tools.ietf.org/html/draft-ietf-httpbis-p4-conditional-12#section-3.1
+        if (!in_array($response->getStatusCode(), array(200, 203, 300, 301, 302, 304, 404, 410))) {
             return;
         }
 
-        if (null !== $configuration->getSMaxAge()) {
-            $response->setSharedMaxAge($configuration->getSMaxAge());
+        if (null !== $age = $configuration->getSMaxAge()) {
+            if (!is_numeric($age)) {
+                $now = microtime(true);
+
+                $age = ceil(strtotime($configuration->getSMaxAge(), $now) - $now);
+            }
+
+            $response->setSharedMaxAge($age);
         }
 
-        if (null !== $configuration->getMaxAge()) {
-            $response->setMaxAge($configuration->getMaxAge());
+        if (null !== $age = $configuration->getMaxAge()) {
+            if (!is_numeric($age)) {
+                $now = microtime(true);
+
+                $age = ceil(strtotime($configuration->getMaxAge(), $now) - $now);
+            }
+
+            $response->setMaxAge($age);
         }
 
         if (null !== $configuration->getExpires()) {

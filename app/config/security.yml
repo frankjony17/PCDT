@@ -34,5 +34,6 @@ security:
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/transporte, roles: ROLE_TRANSPORTE }
         - { path: ^/indicadores, roles: ROLE_INDICADOR }
+        - { path: ^/controlcalidad, roles: ROLE_CONTROLCALIDAD }
         - { path: ^/tareasoperativas, roles: ROLE_TAREASOPERATIVAS }
-        - { path: ^/all/nomenclador/*, roles: [ ROLE_ADMIN, ROLE_TRANSPORTE, ROLE_TAREASOPERATIVAS ]}
+        - { path: ^/all/nomenclador/*, roles: [ ROLE_ADMIN, ROLE_TRANSPORTE, ROLE_TAREASOPERATIVAS, ROLE_CONTROLCALIDAD ]}

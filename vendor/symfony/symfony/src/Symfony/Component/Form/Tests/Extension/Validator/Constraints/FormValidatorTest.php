@@ -18,7 +18,6 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\Extension\Validator\Constraints\Form;
 use Symfony\Component\Form\Extension\Validator\Constraints\FormValidator;
 use Symfony\Component\Form\SubmitButtonBuilder;
-use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\NotNull;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Tests\Constraints\AbstractConstraintValidatorTest;
@@ -225,10 +224,15 @@ class FormValidatorTest extends AbstractConstraintValidatorTest
 
         $this->validator->validate($form, new Form());
 
-        $this->assertViolation('invalid_message_key', array(
-            '{{ value }}' => 'foo',
-            '{{ foo }}' => 'bar'
-        ), 'property.path', 'foo', null, Form::ERR_INVALID);
+        $is2Dot4Api = Validation::API_VERSION_2_4 === $this->getApiVersion();
+
+        $this->buildViolation('invalid_message_key')
+            ->setParameter('{{ value }}', 'foo')
+            ->setParameter('{{ foo }}', 'bar')
+            ->setInvalidValue('foo')
+            ->setCode(Form::NOT_SYNCHRONIZED_ERROR)
+            ->setCause($is2Dot4Api ? null : $form->getTransformationFailure())
+            ->assertRaised();
     }
 
     public function testAddInvalidErrorEvenIfNoValidationGroups()
@@ -257,10 +261,15 @@ class FormValidatorTest extends AbstractConstraintValidatorTest
 
         $this->validator->validate($form, new Form());
 
-        $this->assertViolation('invalid_message_key', array(
-            '{{ value }}' => 'foo',
-            '{{ foo }}' => 'bar'
-        ), 'property.path', 'foo', null, Form::ERR_INVALID);
+        $is2Dot4Api = Validation::API_VERSION_2_4 === $this->getApiVersion();
+
+        $this->buildViolation('invalid_message_key')
+            ->setParameter('{{ value }}', 'foo')
+            ->setParameter('{{ foo }}', 'bar')
+            ->setInvalidValue('foo')
+            ->setCode(Form::NOT_SYNCHRONIZED_ERROR)
+            ->setCause($is2Dot4Api ? null : $form->getTransformationFailure())
+            ->assertRaised();
     }
 
     public function testDontValidateConstraintsIfNotSynchronized()
@@ -289,9 +298,14 @@ class FormValidatorTest extends AbstractConstraintValidatorTest
 
         $this->validator->validate($form, new Form());
 
-        $this->assertViolation('invalid_message_key', array(
-            '{{ value }}' => 'foo',
-        ), 'property.path','foo', null, Form::ERR_INVALID);
+        $is2Dot4Api = Validation::API_VERSION_2_4 === $this->getApiVersion();
+
+        $this->buildViolation('invalid_message_key')
+            ->setParameter('{{ value }}', 'foo')
+            ->setInvalidValue('foo')
+            ->setCode(Form::NOT_SYNCHRONIZED_ERROR)
+            ->setCause($is2Dot4Api ? null : $form->getTransformationFailure())
+            ->assertRaised();
     }
 
     // https://github.com/symfony/symfony/issues/4359
@@ -543,78 +557,39 @@ class FormValidatorTest extends AbstractConstraintValidatorTest
 
         $this->validator->validate($form, new Form());
 
-        $this->assertViolation('Extra!', array(
-            '{{ extra_fields }}' => 'foo'
-        ), 'property.path', array('foo' => 'bar'));
+        $this->buildViolation('Extra!')
+            ->setParameter('{{ extra_fields }}', 'foo')
+            ->setInvalidValue(array('foo' => 'bar'))
+            ->setCode(Form::NO_SUCH_FIELD_ERROR)
+            ->assertRaised();
     }
 
-    /**
-     * @dataProvider getPostMaxSizeFixtures
-     */
-    public function testPostMaxSizeViolation($contentLength, $iniMax, $nbViolation, array $params = array())
+    public function testNoViolationIfAllowExtraData()
     {
-        $this->serverParams->expects($this->once())
-            ->method('getContentLength')
-            ->will($this->returnValue($contentLength));
-        $this->serverParams->expects($this->any())
-            ->method('getNormalizedIniPostMaxSize')
-            ->will($this->returnValue($iniMax));
+        $context = $this->getMockExecutionContext();
 
-        $options = array('post_max_size_message' => 'Max {{ max }}!');
-        $form = $this->getBuilder('name', null, $options)->getForm();
-
-        $this->validator->validate($form, new Form());
-
-        $violations = array();
-
-        for ($i = 0; $i < $nbViolation; ++$i) {
-            $violations[] = $this->createViolation($options['post_max_size_message'], $params, 'property.path', $contentLength);
-        }
-
-        $this->assertViolations($violations);
-    }
-
-    public function getPostMaxSizeFixtures()
-    {
-        return array(
-            array(pow(1024, 3) + 1, '1G', 1, array('{{ max }}' => '1G')),
-            array(pow(1024, 3), '1G', 0),
-            array(pow(1024, 2) + 1, '1M', 1, array('{{ max }}' => '1M')),
-            array(pow(1024, 2), '1M', 0),
-            array(1024 + 1, '1K', 1, array('{{ max }}' => '1K')),
-            array(1024, '1K', 0),
-            array(null, '1K', 0),
-            array(1024, '', 0),
-            array(1024, 0, 0),
-        );
-    }
-
-    public function testNoViolationIfNotRoot()
-    {
-        $this->serverParams->expects($this->once())
-            ->method('getContentLength')
-            ->will($this->returnValue(1025));
-        $this->serverParams->expects($this->never())
-            ->method('getNormalizedIniPostMaxSize');
-
-        $parent = $this->getBuilder()
+        $form = $this
+            ->getBuilder('parent', null, array('allow_extra_fields' => true))
             ->setCompound(true)
             ->setDataMapper($this->getDataMapper())
+            ->add($this->getBuilder('child'))
             ->getForm();
-        $form = $this->getForm();
-        $parent->add($form);
 
-        $this->expectNoValidate();
+        $form->bind(array('foo' => 'bar'));
 
+        $context->expects($this->never())
+            ->method('addViolation');
+        $context->expects($this->never())
+            ->method('addViolationAt');
+
+        $this->validator->initialize($context);
         $this->validator->validate($form, new Form());
-
-        $this->assertNoViolation();
     }
 
     /**
      * Access has to be public, as this method is called via callback array
      * in {@link testValidateFormDataCanHandleCallbackValidationGroups()}
-     * and {@link testValidateFormDataUsesInheritedCallbackValidationGroup()}
+     * and {@link testValidateFormDataUsesInheritedCallbackValidationGroup()}.
      */
     public function getValidationGroups(FormInterface $form)
     {
@@ -623,7 +598,20 @@ class FormValidatorTest extends AbstractConstraintValidatorTest
 
     private function getMockExecutionContext()
     {
-        return $this->getMock('Symfony\Component\Validator\ExecutionContextInterface');
+        $context = $this->getMock('Symfony\Component\Validator\Context\ExecutionContextInterface');
+        $validator = $this->getMock('Symfony\Component\Validator\Validator\ValidatorInterface');
+        $contextualValidator = $this->getMock('Symfony\Component\Validator\Validator\ContextualValidatorInterface');
+
+        $validator->expects($this->any())
+            ->method('inContext')
+            ->with($context)
+            ->will($this->returnValue($contextualValidator));
+
+        $context->expects($this->any())
+            ->method('getValidator')
+            ->will($this->returnValue($validator));
+
+        return $context;
     }
 
     /**

@@ -18,55 +18,57 @@ class UserProvider
         
         $this->util = $util;
     }
-    
+
     /**
      * Comrobar si el usuario existe en el directorio activo LDAP y verificar password.
-     * 
+     *
      * @param string $username Username del usuario.
      * @param string $password Password del usuario.
+     * @return bool|string
      */
     public function loadUserFromLdap($username, $password)
     {   
-//        $ldap_config = $this->util->parse('Seguridad/AdminBundle/Resources/config', 'ldap.yml');
-//        // Positive LDAP link identifier on success, or FALSE on error.
-//        $ds = @ldap_connect($ldap_config['host'], $ldap_config['port']);
-//
-//        ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
-//        ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);
-//        // TRUE on success or FALSE on failure.
-//        if (@ldap_bind($ds))
-//        {   // Buscar usuario en servidor ldap.
-//            @$r = @ldap_search( $ds, 'ou=etecsa.cu,ou=people,dc=etecsa,dc=cu', 'uid=' . $username);
-//            // Si el usuario existe?
-//            if ($r)
-//            {   // Obtengo informacion del usuario.
-//                $result = ldap_get_entries($ds, $r);
-//                // Si tengo la informacion.
-//                if ($result['count'] > 0)
-//                {   // Compruebo password.
-//                    @$ldapbind = ldap_bind($ds, $result[0]['dn'], $this->util->getPlainText($password));
-//                    // Retorno TRUE on success or FALSE on failure.
-//                    if ($ldapbind === \TRUE)
-//                    {
-//                        return $ldapbind;
-//                    }
-//                    // Credenciales Invalidas.
-//                    return '2';
-//                }
-//            }
-//            // No existe una entrada para ese usuario.
-//            return '1';
-//        }
+        $ldap_config = $this->util->parse('Seguridad/AdminBundle/Resources/config', 'ldap.yml');
+        // Positive LDAP link identifier on success, or FALSE on error.
+        $ds = @ldap_connect($ldap_config['host'], $ldap_config['port']);
+
+        ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
+        ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);
+        // TRUE on success or FALSE on failure.
+        if (@ldap_bind($ds))
+        {   // Buscar usuario en servidor ldap.
+            @$r = @ldap_search( $ds, 'ou=etecsa.cu,ou=people,dc=etecsa,dc=cu', 'uid=' . $username);
+            // Si el usuario existe?
+            if ($r)
+            {   // Obtengo informacion del usuario.
+                $result = ldap_get_entries($ds, $r);
+                // Si tengo la informacion.
+                if ($result['count'] > 0)
+                {   // Compruebo password.
+                    @$ldapbind = ldap_bind($ds, $result[0]['dn'], $this->util->getPlainText($password));
+                    // Retorno TRUE on success or FALSE on failure.
+                    if ($ldapbind === true)
+                    {
+                        return $ldapbind;
+                    }
+                    // Credenciales Invalidas.
+                    return '2';
+                }
+            }
+            // No existe una entrada para ese usuario.
+            return '1';
+        }
         // No se puede conectar al servidor LDAP.
-        return \FALSE;
+        return false;
     }
-    
+
     /**
      * Cargar usuario de la base de datos a partir del username y comrobar que tiene el rol necesario para
      * acceder al modulo seleccionado.
-     * 
+     *
      * @param string $username Username del usuario.
      * @param string $rolename Nombre del rol.
+     * @return \Seguridad\AdminBundle\Entity\Users|string
      */
     public function loadUserByUsername($username, $rolename)
     {   // Salida.
@@ -115,6 +117,6 @@ class UserProvider
         {
             return $fetch[0];
         }
-        return \FALSE;
+        return false;
     }
 }

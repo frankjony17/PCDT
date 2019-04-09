@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}CONTROL-CALIDAD{% endblock %}
+
+{% block favicon %}{{ asset('favicon.ico') }}{% endblock %}
+
+{% block extjs %}{% include "::ext-6.2.0.html.twig" %}{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/control_calidad/icons.css') }}" />
+{% endblock %}
+
+{% block javascripts %}<script>
+    {% include "AdminBundle:Admin:globalScript.html.twig" %}
+
+    {#Ext.draw.engine.ImageExporter.defaultUrl = entorno+"/util/chart/export";#}
+
+    Ext.application({
+        name: 'CDT',
+        appFolder: '/js/app',
+
+        controllers: [
+            {% if modulo == 'especialista' %}
+                "control_calidad.especialista.ViewportController",
+                "control_calidad.especialista.ControlCalidadGridController",
+                "control_calidad.especialista.ControlCalidadFormController",
+                "control_calidad.especialista.PlanAccionController",
+                "control_calidad.especialista.ControlTipoController",
+                "control_calidad.especialista.ControlController",
+            {% elseif modulo == 'responsable' %}
+                "control_calidad.especialista.ViewportController",
+                "control_calidad.especialista.ControlCalidadGridController",
+                "control_calidad.especialista.ControlCalidadFormController",
+                "control_calidad.especialista.PlanAccionController",
+            {% endif %}
+        ],
+        launch : function()
+        {
+            {% if modulo == 'especialista' %}
+                Ext.create('CDT.view.control_calidad.especialista.Viewport', { appId: 'control-calidad-app-especialista-id' });
+            {% elseif modulo == 'responsable' %}
+                Ext.create('CDT.view.control_calidad.responsable.Viewport', { appId: 'control-calidad-app-responsable-id' });
+            {% else %}
+                location.href = entorno+'/secured/logout';
+            {% endif %}
+        }
+    });
+</script>{% endblock %}

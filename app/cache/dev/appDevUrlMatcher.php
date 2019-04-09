@@ -27,6 +27,234 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $context = $this->context;
         $request = $this->request;
 
+        if (0 === strpos($pathinfo, '/controlcalidad')) {
+            if (0 === strpos($pathinfo, '/controlcalidad/c')) {
+                if (0 === strpos($pathinfo, '/controlcalidad/cc')) {
+                    // calidad_calidad_controlcalidad_list
+                    if ($pathinfo === '/controlcalidad/cc/list') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_controlcalidad_list', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlCalidadController::listAction',  '_route' => 'calidad_calidad_controlcalidad_list',);
+                    }
+
+                    // calidad_calidad_controlcalidad_add
+                    if ($pathinfo === '/controlcalidad/cc/add') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_controlcalidad_add', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlCalidadController::addAction',  '_route' => 'calidad_calidad_controlcalidad_add',);
+                    }
+
+                    if (0 === strpos($pathinfo, '/controlcalidad/cc/e')) {
+                        // calidad_calidad_controlcalidad_edit
+                        if ($pathinfo === '/controlcalidad/cc/edit') {
+                            $requiredSchemes = array (  'http' => 0,);
+                            if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                                return $this->redirect($pathinfo, 'calidad_calidad_controlcalidad_edit', key($requiredSchemes));
+                            }
+
+                            return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlCalidadController::editAction',  '_route' => 'calidad_calidad_controlcalidad_edit',);
+                        }
+
+                        // calidad_calidad_controlcalidad_estado
+                        if ($pathinfo === '/controlcalidad/cc/estado') {
+                            $requiredSchemes = array (  'http' => 0,);
+                            if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                                return $this->redirect($pathinfo, 'calidad_calidad_controlcalidad_estado', key($requiredSchemes));
+                            }
+
+                            return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlCalidadController::estadoAction',  '_route' => 'calidad_calidad_controlcalidad_estado',);
+                        }
+
+                    }
+
+                    // calidad_calidad_controlcalidad_remove
+                    if ($pathinfo === '/controlcalidad/cc/remove') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_controlcalidad_remove', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlCalidadController::removeAction',  '_route' => 'calidad_calidad_controlcalidad_remove',);
+                    }
+
+                }
+
+                if (0 === strpos($pathinfo, '/controlcalidad/control')) {
+                    // calidad_calidad_control_list
+                    if ($pathinfo === '/controlcalidad/control/list') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_control_list', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlController::listAction',  '_route' => 'calidad_calidad_control_list',);
+                    }
+
+                    // calidad_calidad_control_add
+                    if ($pathinfo === '/controlcalidad/control/add') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_control_add', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlController::addAction',  '_route' => 'calidad_calidad_control_add',);
+                    }
+
+                    // calidad_calidad_control_edit
+                    if ($pathinfo === '/controlcalidad/control/edit') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_control_edit', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlController::editAction',  '_route' => 'calidad_calidad_control_edit',);
+                    }
+
+                    // calidad_calidad_control_remove
+                    if ($pathinfo === '/controlcalidad/control/remove') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_control_remove', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlController::removeAction',  '_route' => 'calidad_calidad_control_remove',);
+                    }
+
+                    if (0 === strpos($pathinfo, '/controlcalidad/control/tipo')) {
+                        // calidad_calidad_controltipo_list
+                        if ($pathinfo === '/controlcalidad/control/tipo/list') {
+                            $requiredSchemes = array (  'http' => 0,);
+                            if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                                return $this->redirect($pathinfo, 'calidad_calidad_controltipo_list', key($requiredSchemes));
+                            }
+
+                            return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlTipoController::listAction',  '_route' => 'calidad_calidad_controltipo_list',);
+                        }
+
+                        // calidad_calidad_controltipo_add
+                        if ($pathinfo === '/controlcalidad/control/tipo/add') {
+                            $requiredSchemes = array (  'http' => 0,);
+                            if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                                return $this->redirect($pathinfo, 'calidad_calidad_controltipo_add', key($requiredSchemes));
+                            }
+
+                            return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlTipoController::addAction',  '_route' => 'calidad_calidad_controltipo_add',);
+                        }
+
+                        // calidad_calidad_controltipo_edit
+                        if ($pathinfo === '/controlcalidad/control/tipo/edit') {
+                            $requiredSchemes = array (  'http' => 0,);
+                            if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                                return $this->redirect($pathinfo, 'calidad_calidad_controltipo_edit', key($requiredSchemes));
+                            }
+
+                            return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlTipoController::editAction',  '_route' => 'calidad_calidad_controltipo_edit',);
+                        }
+
+                        // calidad_calidad_controltipo_remove
+                        if ($pathinfo === '/controlcalidad/control/tipo/remove') {
+                            $requiredSchemes = array (  'http' => 0,);
+                            if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                                return $this->redirect($pathinfo, 'calidad_calidad_controltipo_remove', key($requiredSchemes));
+                            }
+
+                            return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\ControlTipoController::removeAction',  '_route' => 'calidad_calidad_controltipo_remove',);
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // calidad_calidad_default_indexapp
+            if (preg_match('#^/controlcalidad/(?P<app>[^/]++)$#s', $pathinfo, $matches)) {
+                $requiredSchemes = array (  'http' => 0,);
+                if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                    return $this->redirect($pathinfo, 'calidad_calidad_default_indexapp', key($requiredSchemes));
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'calidad_calidad_default_indexapp')), array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\DefaultController::indexAppAction',));
+            }
+
+            // controlcalidad
+            if (rtrim($pathinfo, '/') === '/controlcalidad') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'controlcalidad');
+                }
+
+                $requiredSchemes = array (  'http' => 0,);
+                if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                    return $this->redirect($pathinfo, 'controlcalidad', key($requiredSchemes));
+                }
+
+                return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\DefaultController::indexAction',  '_route' => 'controlcalidad',);
+            }
+
+            if (0 === strpos($pathinfo, '/controlcalidad/planaccion')) {
+                // calidad_calidad_planaccion_list
+                if ($pathinfo === '/controlcalidad/planaccion/list') {
+                    $requiredSchemes = array (  'http' => 0,);
+                    if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                        return $this->redirect($pathinfo, 'calidad_calidad_planaccion_list', key($requiredSchemes));
+                    }
+
+                    return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\PlanAccionController::listAction',  '_route' => 'calidad_calidad_planaccion_list',);
+                }
+
+                // calidad_calidad_planaccion_add
+                if ($pathinfo === '/controlcalidad/planaccion/add') {
+                    $requiredSchemes = array (  'http' => 0,);
+                    if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                        return $this->redirect($pathinfo, 'calidad_calidad_planaccion_add', key($requiredSchemes));
+                    }
+
+                    return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\PlanAccionController::addAction',  '_route' => 'calidad_calidad_planaccion_add',);
+                }
+
+                if (0 === strpos($pathinfo, '/controlcalidad/planaccion/e')) {
+                    // calidad_calidad_planaccion_edit
+                    if ($pathinfo === '/controlcalidad/planaccion/edit') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_planaccion_edit', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\PlanAccionController::editAction',  '_route' => 'calidad_calidad_planaccion_edit',);
+                    }
+
+                    // calidad_calidad_planaccion_estado
+                    if ($pathinfo === '/controlcalidad/planaccion/estado') {
+                        $requiredSchemes = array (  'http' => 0,);
+                        if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                            return $this->redirect($pathinfo, 'calidad_calidad_planaccion_estado', key($requiredSchemes));
+                        }
+
+                        return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\PlanAccionController::estadoAction',  '_route' => 'calidad_calidad_planaccion_estado',);
+                    }
+
+                }
+
+                // calidad_calidad_planaccion_remove
+                if ($pathinfo === '/controlcalidad/planaccion/remove') {
+                    $requiredSchemes = array (  'http' => 0,);
+                    if (!isset($requiredSchemes[$this->context->getScheme()])) {
+                        return $this->redirect($pathinfo, 'calidad_calidad_planaccion_remove', key($requiredSchemes));
+                    }
+
+                    return array (  '_controller' => 'Calidad\\CalidadBundle\\Controller\\PlanAccionController::removeAction',  '_route' => 'calidad_calidad_planaccion_remove',);
+                }
+
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/indicadores')) {
             if (0 === strpos($pathinfo, '/indicadores/arc')) {
                 // indicadores_indicador_arc_list

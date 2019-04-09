@@ -1,0 +1,7 @@
+Calidad\CalidadBundle\Entity\CalBrechasOtros:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [nombre, controlCalidad]
+
+#Calidad\CalidadBundle\Entity\CalPlanAccion:
+#    constraints:
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [nombre, controlCalidad]

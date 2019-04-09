@@ -51,7 +51,7 @@ class Util
     {
         $encriptado = pack('H*',str_replace(' ', '', $encriptado_text));
 
-        return mcrypt_decrypt('rijndael-128','12345678911234567892123456789312', $encriptado, 'cbc', '1234567891123456');
+        return trim(mcrypt_decrypt('rijndael-128','12345678911234567892123456789312', $encriptado, 'cbc', '1234567891123456'));
     }
     
     /**
@@ -64,7 +64,7 @@ class Util
     {
         $pbkdf2 = new \Symfony\Component\Security\Core\Encoder\Pbkdf2PasswordEncoder();
         
-        return $pbkdf2->encodePassword($this->getPlainText($password), \FALSE);
+        return $pbkdf2->encodePassword($this->getPlainText($password), false);
     }
     
     /**

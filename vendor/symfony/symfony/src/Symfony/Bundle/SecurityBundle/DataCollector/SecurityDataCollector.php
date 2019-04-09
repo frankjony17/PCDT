@@ -11,10 +11,11 @@
 
 namespace Symfony\Bundle\SecurityBundle\DataCollector;
 
-use Symfony\Component\Security\Core\SecurityContextInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
+use Symfony\Component\Security\Core\Role\RoleInterface;
 
 /**
  * SecurityDataCollector.
@@ -23,11 +24,16 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
  */
 class SecurityDataCollector extends DataCollector
 {
-    private $context;
+    private $tokenStorage;
 
-    public function __construct(SecurityContextInterface $context = null)
+    /**
+     * Constructor.
+     *
+     * @param TokenStorageInterface|null $tokenStorage
+     */
+    public function __construct(TokenStorageInterface $tokenStorage = null)
     {
-        $this->context = $context;
+        $this->tokenStorage = $tokenStorage;
     }
 
     /**
@@ -35,29 +41,29 @@ class SecurityDataCollector extends DataCollector
      */
     public function collect(Request $request, Response $response, \Exception $exception = null)
     {
-        if (null === $this->context) {
+        if (null === $this->tokenStorage) {
             $this->data = array(
-                'enabled'       => false,
+                'enabled' => false,
                 'authenticated' => false,
-                'token_class'   => null,
-                'user'          => '',
-                'roles'         => array(),
+                'token_class' => null,
+                'user' => '',
+                'roles' => array(),
             );
-        } elseif (null === $token = $this->context->getToken()) {
+        } elseif (null === $token = $this->tokenStorage->getToken()) {
             $this->data = array(
-                'enabled'       => true,
+                'enabled' => true,
                 'authenticated' => false,
-                'token_class'   => null,
-                'user'          => '',
-                'roles'         => array(),
+                'token_class' => null,
+                'user' => '',
+                'roles' => array(),
             );
         } else {
             $this->data = array(
-                'enabled'       => true,
+                'enabled' => true,
                 'authenticated' => $token->isAuthenticated(),
-                'token_class'   => get_class($token),
-                'user'          => $token->getUsername(),
-                'roles'         => array_map(function ($role) { return $role->getRole();}, $token->getRoles()),
+                'token_class' => get_class($token),
+                'user' => $token->getUsername(),
+                'roles' => array_map(function (RoleInterface $role) { return $role->getRole(); }, $token->getRoles()),
             );
         }
     }
@@ -65,7 +71,7 @@ class SecurityDataCollector extends DataCollector
     /**
      * Checks if security is enabled.
      *
-     * @return bool    true if security is enabled, false otherwise
+     * @return bool true if security is enabled, false otherwise
      */
     public function isEnabled()
     {
@@ -95,7 +101,7 @@ class SecurityDataCollector extends DataCollector
     /**
      * Checks if the user is authenticated or not.
      *
-     * @return bool    true if the user is authenticated, false otherwise
+     * @return bool true if the user is authenticated, false otherwise
      */
     public function isAuthenticated()
     {
