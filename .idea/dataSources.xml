@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="829899163">
-    <data-source source="LOCAL" name="PostgreSQL - etecsa_cd_db@localhost" uuid="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="postgres@localhost" uuid="e2bf7611-240d-4969-aeab-9fc5ac6001e8">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/etecsa_cd_db</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://D:/Aplicaciones/Desarrollo/phpStorm/postgresql-9.4-1201.jdbc4.jar</url>
-        </library>
-      </libraries>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
     </data-source>
   </component>
 </project>

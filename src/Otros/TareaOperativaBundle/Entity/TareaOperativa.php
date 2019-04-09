@@ -42,7 +42,14 @@ class TareaOperativa
      *
      * @ORM\Column(name="numero", type="integer", nullable=false)
      */
-    private $numero;    
+    private $numero;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="prioridad", type="boolean")
+     */
+    private $prioridad;
 
     /**
      * @var \EstadoTareaOperativa
@@ -172,8 +179,31 @@ class TareaOperativa
             $ceros = '';
         }
         return $ceros.''.$this->numero;
-    }    
-    
+    }
+
+    /**
+     * Set prioridad
+     *
+     * @param boolean $prioridad
+     * @return TareaOperativa
+     */
+    public function setPrioridad($prioridad)
+    {
+        $this->prioridad = $prioridad;
+
+        return $this;
+    }
+
+    /**
+     * Get prioridad
+     *
+     * @return boolean
+     */
+    public function getPrioridad()
+    {
+        return $this->prioridad;
+    }
+
     /**
      * Add estadoTareaOperativa
      *
@@ -373,7 +403,8 @@ class TareaOperativa
             'acciones' => $accion_info[0],
             'trabajadores_ids' => $array[1],
             "accion" => is_array($accion_info[1]) ? $accion_info[1]["desc"] : "",
-            "accion_id" => is_array($accion_info[1]) ? $accion_info[1]["id"] : ""
+            "accion_id" => is_array($accion_info[1]) ? $accion_info[1]["id"] : "",
+            "prioridad" => $this->getPrioridad()
         );
     }
     

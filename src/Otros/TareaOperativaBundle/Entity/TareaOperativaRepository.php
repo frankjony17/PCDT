@@ -12,10 +12,11 @@ class TareaOperativaRepository extends EntityRepository
      * 
      * @return TareaOperativa
      */
-    public function findTareasOperativas($estado, $dep_id, $uo_id=\NULL)
+    public function findTareasOperativas($estado, $dep_id, $uo_id, $priori=false)
     {
         $estado != "" ? $andEstado = " AND e.estado = '".$estado."' AND e.fecha = (SELECT MAX(eto.fecha) FROM TareaOperativaBundle:EstadoTareaOperativa eto WHERE eto.tareaOperativa = top)" : $andEstado = "";
         $dep_id != "" ? $andRespon = " AND d.id = '".$dep_id."'" : $andRespon = "";
+        $priori == true ? $andPrioridad = " AND top.prioridad = TRUE" : $andPrioridad = "";
 
         $query = $this
                 ->getEntityManager()
@@ -25,7 +26,8 @@ class TareaOperativaRepository extends EntityRepository
                         JOIN tot.trabajador t
                         JOIN t.departamento d
                         JOIN t.area a
-                        JOIN a.unidadOrganizativa uo WHERE uo.id = :uo_id ".$andEstado.$andRespon." ORDER BY top.numero ASC");
+                        JOIN a.unidadOrganizativa uo 
+                        WHERE uo.id = :uo_id".$andEstado.$andRespon.$andPrioridad." ORDER BY top.numero ASC");
         $query->setParameter("uo_id", $uo_id);
 
         return $query->getResult(\Doctrine\ORM\Query::HYDRATE_OBJECT);

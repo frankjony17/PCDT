@@ -48,8 +48,10 @@ Ext.define('CDT.controller.tarea_operativa.especialista.ViewportController', {
                 tooltip: 'Eliminar tarea',
                 iconCls: 'remove'
             },'->',{
-                tooltip: 'Reportes.',
-                iconCls: 'reporte'
+                text: 'A Chequear',
+                tooltip: 'Chequear TO priorizadas por el Jefe de CDT.',
+                iconCls: 'reporte',
+                id: 'resumen-prioridad-to-id'
             },'',{
                 tooltip: 'Leyenda.',
                 iconCls: 'legend-user',

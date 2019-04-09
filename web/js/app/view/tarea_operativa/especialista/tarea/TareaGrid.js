@@ -83,6 +83,12 @@ Ext.define('CDT.view.tarea_operativa.especialista.tarea.TareaGrid', {
                 dataIndex: 'fecha_final'
             }]
         }, {
+            xtype: 'checkcolumn',
+            text: '(P)',
+            dataIndex: 'prioridad',
+            width: 75,
+            id: 'checkcolumn-prioridad-to'
+        }, {
             text: 'Estado',
             dataIndex: 'estado',
             width: 50,

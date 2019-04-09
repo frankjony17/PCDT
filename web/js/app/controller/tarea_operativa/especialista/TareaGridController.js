@@ -27,6 +27,12 @@ Ext.define('CDT.controller.tarea_operativa.especialista.TareaGridController', {
             },
             'tareaGrid button[iconCls=remove]': {
                 click: me.confirmRemuve
+            },
+            '#checkcolumn-prioridad-to': {
+                checkchange: "checkChange"
+            },
+            '#resumen-prioridad-to-id': {
+                click: "resumenPrioridad"
             }
         });
     },
@@ -133,9 +139,9 @@ Ext.define('CDT.controller.tarea_operativa.especialista.TareaGridController', {
             id: 'tool-tip-legend-tareas-id',
             title: '<div style="background:#c2edf9;"><center>LEYENDA</center></div>',
             html: '<table>'+
-                    '<tr><th width=20 style="background:#ff9999;border: 1px solid #CCC !important;"></th><th style="text-align:left;">Pediente.</th></tr>'+
-                    '<tr><th width=20 style="background:rgba(248, 6, 0, 0.88);border: 1px solid #CCC !important;"></th><th style="text-align:left;">Ultimo Día.</th></tr>'+
-                    '<tr><th width=20 style="background:rgba(174, 138, 154, 0.62);border: 1px solid #CCC !important;"></th><th style="text-align:left;">Fuera de Término.</th></tr>'+
+                    '<tr><th width=20 style="background:#fefdff;border: 1px solid #CCC !important;"></th><th style="text-align:left;">Pediente.</th></tr>'+
+                    '<tr><th width=20 style="background:rgba(255, 223, 218, 0.88);border: 1px solid #CCC !important;"></th><th style="text-align:left;">Ultimo Día.</th></tr>'+
+                    '<tr><th width=20 style="background:rgba(255, 251, 149, 0.62);border: 1px solid #CCC !important;"></th><th style="text-align:left;">Fuera de Término.</th></tr>'+
                   '</table>',
             listeners: {
                  hide: function (tip) {
@@ -308,6 +314,28 @@ Ext.define('CDT.controller.tarea_operativa.especialista.TareaGridController', {
                     combo.setValue("Mensual");
                     break;
             }
+        });
+    },
+    checkChange: function (checkbox, rowIndex, checked) {
+        var me = this, record = me.store.getAt(rowIndex);
+        Ext.Ajax.request({
+            url: entorno+'/tareasoperativas/to/prioridad',
+            params: {
+                id: record.get('id'),
+                prioridad: checked
+            },
+            success: function(){
+                me.store.reload();
+            },
+            failure: function(){
+                Ext.ex.MessageBox('Error','No se pudo conectar con el servidor, intentelo mas tarde.', 'error');
+            }
+        });
+    },
+    resumenPrioridad: function () {
+        var me = this;
+        me.store.load({
+            params: { Prioridad: true }
         });
     }
 });

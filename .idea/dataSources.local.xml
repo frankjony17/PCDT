@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - etecsa_cd_db@localhost" uuid="3b38925c-bc91-4bc2-89d9-ebcb9972ad8a">
+    <data-source name="postgres@localhost" uuid="e2bf7611-240d-4969-aeab-9fc5ac6001e8">
+      <database-info product="PostgreSQL" version="9.5.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>cdt_usr</user-name>
-      <schema-pattern>etecsa_cd_db.pg_catalog etecsa_cd_db.public</schema-pattern>
-      <default-schemas>etecsa_cd_db.pg_catalog etecsa_cd_db.public</default-schemas>
+      <introspection-schemas>postgres:public</introspection-schemas>
     </data-source>
   </component>
 </project>

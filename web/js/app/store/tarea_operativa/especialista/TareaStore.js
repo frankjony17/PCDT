@@ -2,7 +2,7 @@
 Ext.define('CDT.store.tarea_operativa.especialista.TareaStore', {
     extend: 'Ext.data.Store',
     
-    fields: ['id', 'numero', 'responsable', 'descripcion', 'chequeo', 'fecha_inicial',  'fecha_final', 'estado', 'acciones', 'trabajadores_ids', "accion", "accion_id"],
+    fields: ['id', 'numero', 'responsable', 'descripcion', 'chequeo', 'fecha_inicial',  'fecha_final', 'estado', 'acciones', 'trabajadores_ids', "accion", "accion_id", "prioridad"],
     //autoLoad: true,
     sorters: 'numero',
     storeId: 'tareaStore',
