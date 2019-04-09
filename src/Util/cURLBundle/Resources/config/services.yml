@@ -1,0 +1,20 @@
+services:
+#    curl.file:
+#        class: Util\cURLBundle\Resources\File
+        
+#    curl:
+#        class: Util\cURLBundle\Services\cURL
+#        arguments: [@curl.file]
+        
+    cdt.util:
+        class: Util\cURLBundle\Services\Util
+
+    cdt.logger:
+        class: Util\cURLBundle\Services\Logger
+
+    cdt.email:
+        class: Util\cURLBundle\Services\Email
+        arguments: [@mailer]
+
+    chart.export:
+        class: Util\cURLBundle\Services\ChartExporting

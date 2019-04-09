@@ -1,0 +1,43 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}ADMIN-CDT-ETECSA{% endblock %}
+
+{% block favicon %}{{ asset('favicon.ico') }}{% endblock %}
+
+{% block extjs %} {% include "::ext-4.2.1.html.twig" %} {% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/index.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+<script>
+{% include "AdminBundle:Admin:globalScript.html.twig" %}
+    
+    Ext.application({
+        name: 'CDT',
+
+        appFolder: '/js/app',
+
+        controllers: [
+            "admin.ViewportController",
+            'admin.SeguridadTreeController',
+            'admin.OtrosTreeController',
+            'admin.AdminController',
+            "email.EmailGridController",
+            'nomenclador.NomencladorTreeController',
+            'nomenclador.UnidadOrganizativaController',
+            'nomenclador.AreaController',
+            'nomenclador.DepartamentoController',
+            'nomenclador.CargoController',
+            'nomenclador.TrabajadorInternoController',
+            'nomenclador.TrabajadorExternoController'
+        ],
+
+        launch: function()
+        { 
+            Ext.create('CDT.view.admin.Viewport');
+        }    
+    });
+</script>
+{% endblock %}

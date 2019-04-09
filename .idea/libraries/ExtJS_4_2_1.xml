@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="ExtJS 4.2.1" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="ExtJS 4.2" />
+      <option name="frameworkVersion" value="4.2.1" />
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/web/js/ext-4.2.1" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/web/js/vendor/ext-4.2.1" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

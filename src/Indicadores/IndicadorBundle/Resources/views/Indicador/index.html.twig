@@ -1,0 +1,45 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}INDICADORES-ETECSA{% endblock %}
+
+{% block favicon %}{{ asset('favicon.ico') }}{% endblock %}
+
+{% block extjs %} {% include "::ext-6.0.1.html.twig" %} {% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/indicador/index.css') }}" />
+{% endblock %}
+    
+{% block javascripts %}
+    <script>
+        {% include "AdminBundle:Admin:globalScript.html.twig" %}
+        fecha_year = "{{ year }}";
+
+        Ext.application({
+            name: 'CDT',
+            appFolder: '/js/app',
+            controllers: [
+                {% if modulo == 'editor' %}
+                    "indicador.GlobalController",
+                    "indicador.ArcController",
+                    "indicador.ObjetivoController",
+                    "indicador.CriterioMedidaController",
+                    "indicador.CriterioMedidaPanelController"
+                {% endif %}
+            ],
+            launch : function()
+            {
+                {% if modulo == 'editor' %}
+                    var arc = [];
+                    {% for a in arc %}
+                        arc.push({'text': "<b>{{ a.nombre }}</b>"+" : {{ a.descripcion | upper }}", 'tooltip': "{{ a.descripcion }}", 'id': "{{ a.id }}", 'colspan': "2"});
+                    {% endfor %}
+                    //!
+                    Ext.create('CDT.view.indicador.Viewport', {arc: arc});
+                {#{% else %}#}
+                    {#location.href = entorno+'/secured/logout';#}
+                {% endif %}
+            }
+        });
+    </script>
+{% endblock %}

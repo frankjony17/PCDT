@@ -1,0 +1,41 @@
+/* 
+    Created on : 25-ene-2014, 17:08:23
+    Author     : Frank
+*/
+
+@import url(icons.css);
+
+/*
+ * style rows on mouseover
+ */
+.x-grid-row-over .x-grid-cell-inner {
+    font-weight: bold;
+}
+
+/*
+    HEADER
+*/
+#admin-header {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fc33a), color-stop(100%, #739b2e));
+  background-image: -webkit-linear-gradient(top, #8fc33a, #739b2e);
+  background-image: -moz-linear-gradient(top, #8fc33a, #739b2e);
+  background-image: -o-linear-gradient(top, #8fc33a, #739b2e);
+  background-image: linear-gradient(top, #8fc33a, #739b2e);
+  border-bottom: 1px solid #567422;
+}
+
+#admin-header-title {
+  padding: 5px 10px 5px 40px;
+  background: url(../../images/portal/etecsa-w.png) no-repeat 10px 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #4e691f;
+}
+
+.x-grid-row-no-roles-color {
+    background-color: #ffff99;
+}
+.x-grid-row-estado-color {
+    background-color: #ff9999;
+}

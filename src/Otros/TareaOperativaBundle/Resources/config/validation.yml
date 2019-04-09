@@ -1,0 +1,19 @@
+Otros\TareaOperativaBundle\Entity\TareaOperativa:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [fechaCreacion, descripcion]
+        
+Otros\TareaOperativaBundle\Entity\AccionTareaOperativa:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [descripcion, tareaOperativa]
+
+Otros\TareaOperativaBundle\Entity\ChequeoTareaOperativa:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [periodo, tareaOperativa]
+
+Otros\TareaOperativaBundle\Entity\EstadoTareaOperativa:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [estado, fechaFinal, tareaOperativa]
+
+Otros\TareaOperativaBundle\Entity\TareaOperativaTrabajador:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [tareaOperativa, trabajador]

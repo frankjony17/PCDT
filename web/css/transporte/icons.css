@@ -1,0 +1,79 @@
+/* 
+    Created on : 14-ene-2014, 14:54:42
+    Author     : Frank
+*/
+
+/**MENU*/
+.menu-nomenclador {
+    background-image : url(/images/transporte/menu-nomenclador.png) !important;
+}
+.menu-parqueo {
+    background-image : url(/images/transporte/menu-parqueo.png) !important;
+}
+.menu-eventual {
+    background-image : url(/images/transporte/eventual.png) !important;
+}
+.menu-planificacion {
+    background-image : url(/images/transporte/menu-planificacion.png) !important;
+}
+
+/**MENU-ITEMS**/
+.matricula {
+    background-image : url(/images/transporte/matricula.png) !important;
+}
+.vehiculo {
+    background-image : url(/images/transporte/vehiculo.png) !important;
+}
+.chofer {
+    background-image : url(/images/transporte/chofer.png) !important;
+}
+.area-parqueo {
+    background-image : url(/images/transporte/area-parqueo.png) !important;
+}
+.planificacion {
+    background-image : url(/images/transporte/planificacion.png) !important;
+}
+.conrol-diario {
+    background-image : url(/images/transporte/conrol-diario.png) !important;
+}
+.circulacion-eventual {
+    background-image : url(/images/transporte/circulacion-eventual.png) !important;
+}
+.parqueo-eventual {
+    background-image : url(/images/transporte/parqueo-eventual.png) !important;
+}
+.situacion-operativa {
+    background-image : url(/images/transporte/situacion-operativa.png) !important;
+}
+.chofer-vehiculo {
+    background-image : url(/images/transporte/chofer-vehiculo.png) !important;
+}
+
+/**Grid-Form**/
+.change {
+    background-image : url(/images/transporte/change.png) !important;
+}
+.trash {
+    background-image : url(/images/transporte/trash.png) !important;
+}
+.so {
+    background-image : url(/images/transporte/so.png) !important;
+}
+.all-pending {
+    background-image : url(/images/transporte/all-pending.png) !important;
+}
+.not-pending {
+    background-image : url(/images/transporte/not-pending.png) !important;
+}
+.all {
+    background-image : url(/images/transporte/all.png) !important;
+}
+.config {
+    background-image : url(/images/transporte/config.png) !important;
+}
+.aprobar {
+    background-image : url(/images/transporte/shared.png) !important;
+}
+.change-id {
+    background-image : url(/images/transporte/change-id.png) !important;
+}

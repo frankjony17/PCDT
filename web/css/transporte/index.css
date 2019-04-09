@@ -1,0 +1,138 @@
+/* 
+    Created on : 25-ene-2014, 17:08:23
+    Author     : Frank
+*/
+
+@import url(icons.css);
+
+.x-grid-row-denegado-color {
+    background-color: #cccccc;
+    text-decoration: line-through;
+}
+.x-grid-row-color {
+    background-color: #ff9999;
+}
+.x-grid-row-estado-color {
+    background-color: #a5e5fd;
+}
+
+.x-message-box .ext-mb-download {
+    background: url(../../images/transporte/download.gif) no-repeat scroll 6px 0px transparent;
+    height: 52px !important;
+}
+
+.x-btn-color {
+     border-color: #e1e1e1;
+     border-radius: 4px;
+     background-image: none;
+}
+
+.x-btn-color {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px 3px 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  background-image: none;
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+  background-image: linear-gradient(top, #ffffff, #eeeeee);
+  
+}
+.x-btn-color .x-btn-inner {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: helvetica, arial, verdana, sans-serif;
+  color: #666666;   
+}
+
+.x-btn-color-select {
+     border-color: #e1e1e1;
+     border-radius: 4px;
+     background-image: none;
+     background-color: #ececec;
+}
+.x-btn-color-select .x-btn-inner {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: helvetica, arial, verdana, sans-serif;
+  color: #666666;   
+}
+
+/*
+    ComboBox
+*/
+.combobox {
+    border: 1px;
+    padding: 4px;
+    display: block;
+}
+.combobox {
+    font-size: 12px;
+    font-weight: normal;
+    font-family: verdana;
+    font-style: normal;
+    border-color: #666666;
+    border-radius: 4px;
+    font-weight: bold;
+    background: url(../../images/transporte/template.png) no-repeat 5px;
+}
+.combobox:hover {
+    font-style: italic;
+}
+
+.combobox-add {
+    border-color: #999999;
+    border-radius: 4px;
+}
+.combobox-add {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: verdana;
+  font-style: normal;
+}
+.combobox-add {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 3px 3px 3px 3px;
+  border-width: 1px;
+  border-style: solid;
+  background: url(../../images/transporte/template1.png) no-repeat 5px;
+  background-color: #f8f8f8;
+}
+.combobox-add:hover {
+    font-style: italic;
+    background: url(../../images/transporte/template2.png) no-repeat 5px;
+}
+
+/*
+    HEADER
+*/
+#transporte-admin-header {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fc33a), color-stop(100%, #739b2e));
+  background-image: -webkit-linear-gradient(top, #8fc33a, #739b2e);
+  background-image: -moz-linear-gradient(top, #8fc33a, #739b2e);
+  background-image: -o-linear-gradient(top, #8fc33a, #739b2e);
+  background-image: linear-gradient(top, #8fc33a, #739b2e);
+  border-bottom: 1px solid #567422;
+}
+#transporte-admin-header {
+  background-image: url(../../images/header.gif);
+}
+#transporte-admin-header-title {
+  padding: 5px 10px 5px 40px;
+  background: url(../../images/portal/etecsa-w.png) no-repeat 10px 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #4e691f;
+}

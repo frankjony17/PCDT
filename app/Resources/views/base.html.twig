@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="shortcut icon" href="{% block favicon %}{% endblock %}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/symfony/body.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/symfony/structure.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/symfony/configurator.css') }}" />
+
+        <title>{% block title %}{% endblock %}</title>
+
+        {% block extjs %}{% endblock %}
+
+        {% block stylesheet %}{% endblock %}
+        
+        {% block javascripts %}{% endblock %}
+    </head>
+</html>

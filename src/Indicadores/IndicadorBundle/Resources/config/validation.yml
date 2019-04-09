@@ -1,0 +1,42 @@
+Indicadores\IndicadorBundle\Entity\IndArc:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [nombre, fecha]
+        
+Indicadores\IndicadorBundle\Entity\IndArc:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [descripcion, fecha]
+#####################################################################################################
+Indicadores\IndicadorBundle\Entity\IndCriterioMedida:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [descripcion, objetivo]
+
+Indicadores\IndicadorBundle\Entity\IndCriterioMedida:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [nombre, objetivo]
+#####################################################################################################
+Indicadores\IndicadorBundle\Entity\IndEvaluacion:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: tipo
+#####################################################################################################
+Indicadores\IndicadorBundle\Entity\IndObjetivo:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nombre
+Indicadores\IndicadorBundle\Entity\IndObjetivo:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [nombre, tipoObjetivo]
+
+Indicadores\IndicadorBundle\Entity\IndObjetivo:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [descripcion, tipoObjetivo]
+#####################################################################################################
+Indicadores\IndicadorBundle\Entity\IndPlan:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [criterioMedida, unidadOrganizativa]
+#####################################################################################################
+Indicadores\IndicadorBundle\Entity\IndReal:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [mes, plan]
+#####################################################################################################
+Indicadores\IndicadorBundle\Entity\IndTipoObjetivo:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nombre

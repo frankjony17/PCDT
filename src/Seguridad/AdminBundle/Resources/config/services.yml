@@ -1,0 +1,19 @@
+#Servicios
+services:
+    security.exception:
+        class: Seguridad\AdminBundle\Security\ExceptionListener
+        arguments: [@admin.util, @router]
+        tags:
+           - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+           
+    admin.user:
+        class: Seguridad\AdminBundle\Security\UserProvider
+        arguments: [@doctrine, @admin.util]
+    
+    admin.security:
+        class: Seguridad\AdminBundle\Security\SecurityAuthentication
+        arguments: [@admin.util, @session, @doctrine, @admin.user]
+        
+    admin.util:
+        class: Seguridad\AdminBundle\Security\Util
+        arguments: [@router, @session, @cdt.logger]

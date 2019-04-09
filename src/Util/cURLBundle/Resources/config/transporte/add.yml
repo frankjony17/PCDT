@@ -1,0 +1,3 @@
+carro:
+    URL: http://partetransporte.etecsa.cu/AutADDCarro.asp
+    Method: POST

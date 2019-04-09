@@ -1,0 +1,37 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}PORTAL-CDT-ETECSA{% endblock %}
+
+{% block favicon %}{{ asset('favicon.ico') }}{% endblock %}
+
+{% block extjs %} {% include "::ext-4.2.1.html.twig" %} {% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/portal/index.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+    {# Files by encripted #}
+    <script type="text/javascript" src="{{ asset('js/vendor/other/mcrypt/Serpent.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/vendor/other/mcrypt/rijndael.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/vendor/other/mcrypt/mcrypt.js') }}"></script>
+    {# App #}
+    <script>
+        modulo = "";
+        entorno = "{{ entorno }}";
+
+        Ext.application({
+            name: 'CDT',
+
+            appFolder: '/js/app',
+
+            controllers: 'portal.ViewportController',
+
+            launch: function() {
+                Ext.create('CDT.view.portal.Viewport');
+            }
+        });
+    </script>
+    
+    <div id="login" align = "center" style="padding-top: 75px;"></div>
+{% endblock %}

@@ -1,0 +1,19 @@
+imports:
+    #Seguridad#
+    - { resource: @AdminBundle/Resources/config/services.yml }
+    #Otros#
+    - { resource: @NomencladorBundle/Resources/config/services.yml }
+    #Transporte#
+    - { resource: @CirculacionEventualBundle/Resources/config/services.yml }
+    - { resource: @ControlParqueoBundle/Resources/config/services.yml }
+    - { resource: @ParqueoEventualBundle/Resources/config/services.yml }
+    - { resource: @PlanificacionBundle/Resources/config/services.yml }
+    - { resource: @TransporteBundle/Resources/config/services.yml }
+    #Tareas Operativas#
+    - { resource: @TareaOperativaBundle/Resources/config/services.yml }
+    #Util#
+    - { resource: @cURLBundle/Resources/config/services.yml }
+    #Reportes#
+    - { resource: @PDFBundle/Resources/config/services.yml }
+    #Indicadores#
+    - { resource: @IndicadorBundle/Resources/config/services.yml }    

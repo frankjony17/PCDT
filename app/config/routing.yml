@@ -1,0 +1,79 @@
+indicador:
+    resource: "@IndicadorBundle/Controller/"
+    type:     annotation
+    prefix:   /indicadores/
+    schemes: [http]
+
+tarea_operativa:
+    resource: "@TareaOperativaBundle/Controller/"
+    type:     annotation
+    prefix:   /tareasoperativas/
+    schemes: [http]
+
+nomenclador:
+    resource: "@NomencladorBundle/Controller/"
+    type:     annotation
+    prefix:   /all/nomenclador/
+    schemes: [http]
+
+planificacion:
+    resource: "@PlanificacionBundle/Controller/"
+    type:     annotation
+    prefix:   /transporte/planificacion/
+    schemes: [http]
+
+circulacion_eventual:
+    resource: "@CirculacionEventualBundle/Controller/"
+    type:     annotation
+    prefix:   /transporte/circulacion/eventual/
+    schemes: [http]
+
+parqueo_eventual:
+    resource: "@ParqueoEventualBundle/Controller/"
+    type:     annotation
+    prefix:   /transporte/parqueo/eventual/
+    schemes: [http]
+
+control_parqueo:
+    resource: "@ControlParqueoBundle/Controller/"
+    type:     annotation
+    prefix:   /transporte/control/parqueo/
+    schemes: [http]
+
+transporte:
+    resource: "@TransporteBundle/Controller/"
+    type:     annotation
+    prefix:   /transporte/
+    schemes: [http]
+
+pdf:
+    resource: "@PDFBundle/Controller/"
+    type:     annotation
+    prefix:   /pdf/
+    schemes: [http]
+
+util:
+    resource: "@cURLBundle/Controller/"
+    type:     annotation
+    prefix:   /util/
+    schemes: [http]
+#-AdminBundle------------------------------------------------------------------#
+admin_app:
+    resource: "@AdminBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin/
+    schemes: [http]
+
+#schemes: [https]
+admin_secured:
+    resource: "@AdminBundle/Controller/SecuredController.php"
+    type:     annotation
+    prefix:   /secured/
+    schemes: [http]
+    
+admin_portal:
+    resource: "@AdminBundle/Controller/PortalController.php"
+    type:     annotation
+    prefix:   /
+    schemes: [http]  
+

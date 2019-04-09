@@ -1,0 +1,18 @@
+
+{#Mi Extjs File#}
+<link href="{{ asset('js/vendor/ext-4.2.1/ext-theme-neptune/ext-theme-neptune-all.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('css/all.css') }}" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="{{ asset('js/vendor/ext-4.2.1/ext-all.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/vendor/ext-4.2.1/ext-lang-es.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/vendor/ext-4.2.1/shared/VTypes.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/vendor/other/util.js') }}"></script>
+
+<script>
+    Ext.Loader.setConfig({
+        enabled: true
+    });
+    Ext.Loader.setPath({
+        'Ext.ux': '/js/vendor/ext-4.2.1/shared'
+    });
+</script>

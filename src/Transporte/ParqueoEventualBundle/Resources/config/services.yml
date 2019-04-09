@@ -1,0 +1,4 @@
+#services:
+#    cdtij.util:
+#        class: Otros\NomencladorBundle\Services\Util
+#        arguments: [@doctrine, @validator]

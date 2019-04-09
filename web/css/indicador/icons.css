@@ -1,0 +1,21 @@
+/* 
+    Created on : 11-ago-2015, 12:48:29
+    Author     : Frank
+*/
+
+.tree-open-folder {
+    background-image: url(../../images/indicador/folder-open.png) !important;
+}
+.tree-close-folder {
+    background-image: url(../../images/indicador/folder-close.png) !important;
+}
+.x-grid-tree-node-expanded .tree-close-folder {
+    background-image: url(../../images/indicador/folder-open.png) !important;
+}
+
+.tree-node-1 {
+    background-image: url(../../images/indicador/node-1.png) !important;
+}
+.tree-node-2 {
+    background-image: url(../../images/indicador/node-2.png) !important;
+}

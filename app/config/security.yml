@@ -1,0 +1,38 @@
+security:
+    encoders:
+        Seguridad\AdminBundle\Entity\Users: plaintext
+
+    providers:
+        database:
+            entity: { class: Seguridad\AdminBundle\Entity\Users, property: username }
+
+    firewalls:
+        login:
+            pattern: ^/secured/login$
+            security: false
+        check:
+            pattern:  ^/secured/login/check$
+            security: false
+        email:
+            pattern:  ^/util/email/recordatorio$
+            security: false
+            
+        cdt:
+            pattern: ^/
+            provider: database
+            form_login:
+                check_path: security_check
+                login_path: login
+                intention: authenticate
+                post_only: true
+            logout:
+                path: logout
+                target: portal
+                invalidate_session: true
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/transporte, roles: ROLE_TRANSPORTE }
+        - { path: ^/indicadores, roles: ROLE_INDICADOR }
+        - { path: ^/tareasoperativas, roles: ROLE_TAREASOPERATIVAS }
+        - { path: ^/all/nomenclador/*, roles: [ ROLE_ADMIN, ROLE_TRANSPORTE, ROLE_TAREASOPERATIVAS ]}

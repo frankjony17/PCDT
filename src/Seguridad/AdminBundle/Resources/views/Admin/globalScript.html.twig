@@ -1,0 +1,31 @@
+usuario = "{{ session.get('nombre_apellidos_trabajador') | trim(' ') }}";
+unidadorganizativa = "{{ session.get('nombre_unidad_organizativa') }}";
+entorno = "{{ session.get('entorno') }}";
+aplicaciones = [];
+
+{% if is_granted('ROLE_ADMIN') %}
+    aplicaciones.push({'text': 'Administración', 'iconCls': 'admin-app', 'id': 'admin-app-id'});
+{% endif %}
+
+{% if is_granted('ROLE_ESPECIALISTA_TRANSPORTE') %}
+    aplicaciones.push({'text': 'Transporte (Especialista)', 'iconCls': 'transporte-app-especialista', 'id': 'transporte-app-especialista-id'});
+{% endif %}
+{% if is_granted('ROLE_PLANIFICADOR_TRANSPORTE') %}
+    aplicaciones.push({'text': 'Transporte (Planificador)', 'iconCls': 'transporte-app-planificador', 'id': 'transporte-app-planificador-id'});
+{% endif %}
+{% if is_granted('ROLE_TECNICO_TRANSPORTE') %}
+    aplicaciones.push({'text': 'Transporte (Operativo de Guardia)', 'iconCls': 'transporte-app-tecnico', 'id': 'transporte-app-tecnico-id'});
+{% endif %}
+
+{% if is_granted('ROLE_ESPECIALISTA_TAREAS_OPERATIVAS') %}
+    aplicaciones.push({'text': 'Tareas Operativas (Especialista)', 'iconCls': 'tareas-operativas-app-especialista', 'id': 'tareas-operativas-app-especialista-id'});
+{% endif %}
+{% if is_granted('ROLE_SUPERVISOR_TAREAS_OPERATIVAS') %}
+    aplicaciones.push({'text': 'Tareas Operativas (Supervisor)', 'iconCls': 'tareas-operativas-app-supervisor', 'id': 'tareas-operativas-app-supervisor-id'});
+{% endif %}
+{% if is_granted('ROLE_TECNICO_TAREAS_OPERATIVAS') %}
+    aplicaciones.push({'text': 'Tareas Operativas (Operativo de Guardia)', 'iconCls': 'transporte-app-tecnico', 'id': 'tareas-operativas-app-tecnico-id'});
+{% endif %}
+{% if is_granted('ROLE_RESPONSABLE_TAREAS_OPERATIVAS') %}
+    aplicaciones.push({'text': 'Tareas Operativas (Responsable)', 'iconCls': 'tareas-operativas-app-responsable', 'id': 'tareas-operativas-app-responsable-id'});
+{% endif %}

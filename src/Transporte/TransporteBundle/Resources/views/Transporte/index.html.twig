@@ -1,0 +1,45 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}TRANSPORTE-ETECSA{% endblock %}
+
+{% block favicon %}{{ asset('favicon.ico') }}{% endblock %}
+
+{% block extjs %} {% include "::ext-4.2.1.html.twig" %} {% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/transporte/index.css') }}" />
+{% endblock %}
+    
+{% block javascripts %}
+<script>
+{% include "AdminBundle:Admin:globalScript.html.twig" %}
+    
+Ext.application({
+    name: 'CDT',
+    appFolder: '/js/app',
+
+    controllers: [
+        {% if modulo == 'especialista' %}
+        "transporte.EspecialistaViewportController",
+        "transporte.especialista.ChoferController",
+        "transporte.especialista.MatriculaController",
+        "transporte.especialista.VehiculoController",
+        "transporte.especialista.AreaParqueoController",
+        {% elseif modulo == 'planificador' %}
+            "transporte.EspecialistaViewportController",
+        {% endif %}
+    ],
+
+    launch : function()
+    {
+        {% if modulo == 'especialista' %}
+            Ext.create('CDT.view.transporte.EspecialistaViewport');
+        {% elseif modulo == 'planificador' %}
+            Ext.create('CDT.view.transporte.PlanificadorViewport');
+        {% else %}
+            location.href = entorno+'/secured/logout';
+        {% endif %}
+    }
+});
+</script>
+{% endblock %}

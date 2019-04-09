@@ -1,0 +1,4 @@
+
+services:
+    transporte.util:
+        class: Transporte\TransporteBundle\Services\Util

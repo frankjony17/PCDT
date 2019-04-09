@@ -1,0 +1,85 @@
+    /*
+    Created on : 10-abr-2014, 23:39:56
+    Author     : frank.ricardo
+*/
+@import url(util.css);
+@import url(table.css);
+
+/* 
+ * style rows on mouseover 
+ */
+.x-grid-row-over .x-grid-cell-inner {
+    font-weight: bold;
+}
+
+.x-message-box .ext-mb-download {
+    background: url(../../images/download.gif) no-repeat scroll 6px 0px transparent;
+    height: 52px !important;
+}
+
+.logout {
+    background-image : url(/images/logout.png) !important;
+}
+.ok {
+    background-image : url(/images/save.png) !important;
+}
+.cancel {
+    background-image : url(/images/cancel.png) !important;
+}
+.add {
+    background-image : url(/images/add.png) !important;
+}
+.remove {
+    background-image : url(/images/remove.png) !important;
+}
+.help {
+    background-image : url(/images/help.png) !important;
+}
+.edit {
+    background-image : url(/images/edit.png) !important;
+}
+.reporte {
+    background-image : url(/images/reportes.png) !important;
+}
+.app {
+    background-image : url(/images/app.png) !important;
+}
+.chart {
+    background-image : url(/images/chart.png) !important;
+}
+.chart-exporting {
+    background-image : url(/images/chart-exporting.png) !important;
+}
+.chart-donut {
+    background-image : url(/images/visualization.png) !important;
+}
+
+.menu-close {
+    background-image : url(/images/menu-close.png) !important;
+}
+/*.refresh {*/
+    /*background-image : url(/images/refresh.png) !important;*/
+/*}*/
+.trash {
+    background-image : url(/images/trash.png) !important;
+}
+.message {
+    background-image : url(/images/message.png) !important;
+}
+.mail-send {
+    background-image : url(/images/mail-send.png) !important;
+}
+
+/*Menu Aplicaciones*/
+.transporte-app-planificador {
+    background-image : url(/images/transporte-app-planificador.png) !important;
+}
+.transporte-app-especialista {
+    background-image : url(/images/transporte-app-especialista.png) !important;
+}
+.transporte-app-tecnico {
+    background-image : url(/images/transporte-app-tecnico.png) !important;
+}
+.admin-app {
+    background-image : url(/images/admin-app.png) !important;
+}

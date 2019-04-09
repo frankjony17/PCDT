@@ -1,0 +1,19 @@
+
+parameters:
+    cdtij_tcpdf.cache_dir: %kernel.cache_dir%/tcpdf
+    
+services:
+    cdtij.tcpdf:
+        class: Reportes\PDFBundle\Services\TCPDFService
+        file: %cdtij_tcpdf.file%
+        arguments: [%cdtij_tcpdf.class%]
+        
+    cdtij.tcpdf.cachewarmer:
+        class: Reportes\PDFBundle\Services\TCPDFCacheWarmer
+        arguments: [@service_container]
+        tags:
+            - { name: kernel.cache_warmer }
+            
+    util.tcpdf:
+        class: Reportes\PDFBundle\Services\Util
+        arguments: [@cdtij.tcpdf]

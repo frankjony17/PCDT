@@ -1,0 +1,23 @@
+
+<script type="text/javascript" src="{{ asset('js/other/canvg-master/rgbcolor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/other/canvg-master/StackBlur.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/other/canvg-master/canvg.js') }}"></script>
+
+<div id="container"><canvas id="canvas"></canvas></div>
+
+<svg width="100" height="100", id="dencoder">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<script>
+    //    function renderCanvas()
+    //    {
+    var oSerializer = new XMLSerializer();
+    var sXML = oSerializer.serializeToString(document.getElementById("dencoder"));
+
+    canvg(document.getElementById('canvas'), sXML, { ignoreMouse: true, ignoreAnimation: true });
+
+    var data = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    window.location.href = data;
+    //    }
+</script>

@@ -1,0 +1,28 @@
+<p><b><span style="color: red">Esto es un recordatorio!!!</span></b></p>
+<p>Tareas Operativas del día de mañana:</p>
+
+    <table style="font-size: 18px; border-radius: 6px;" border="1">
+        <thead style="background-color:#157fcc; box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; border-top: none; text-shadow: 0 1px 0 rgba(255,255,255,.5);">
+        <tr>
+            <th rowspan="2">Área</th>
+            <th rowspan="2">Descripción</th>
+            <th colspan="2">Fecha</th>
+        </tr>
+        <tr><th>Inicio</th><th>Final</th></tr>
+        </thead>
+        <tbody style="font-size: 16px; text-align: left;">
+        {% for key, value in tareas %}
+            {% for tarea in value %}
+                <tr>
+                    <td>&nbsp;&nbsp;{{ tarea.area }}&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ tarea.descripcion }} (<b>{{ tarea.numero }})</b>&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;{{ tarea.fecha_creacion }}&nbsp;&nbsp;</td>
+                    <td>&nbsp;&nbsp;{{ tarea.fecha_final }}&nbsp;&nbsp;</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+        </tbody>
+    </table>
+<br>
+<p><span style="color: #b5b8c8">Notificación enviada desde: <b>Portal de Trabajo CDTIJ <=> </b>
+<a href="http://www.pcdt.ilj.etecsa.cu">http://www.pcdt.ilj.etecsa.cu</a></span></p>

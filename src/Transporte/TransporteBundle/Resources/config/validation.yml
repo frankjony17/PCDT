@@ -1,0 +1,25 @@
+Transporte\TransporteBundle\Entity\Chofer:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: trabajador
+        
+Transporte\TransporteBundle\Entity\AreaParqueo:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nombre
+ 
+Transporte\TransporteBundle\Entity\Matricula:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+#Transporte\TransporteBundle\Entity\Chofer:
+#    constraints:
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: licencia
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: trabajador
+#        
+#Transporte\TransporteBundle\Entity\SituacionOperativa:
+#    constraints:
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: nombre
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: descripcion
+#        
+#Transporte\TransporteBundle\Entity\ChoferVehiculo:
+#    constraints:
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [chofer, permanente]
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [chofer, vehiculo]

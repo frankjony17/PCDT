@@ -1,0 +1,9 @@
+
+services:
+    to.util:
+        class: Otros\TareaOperativaBundle\Services\Util
+        arguments: [@doctrine]
+#        
+#    otros.sap:
+#        class: Otros\NomencladorBundle\Services\SapRH
+#        arguments: [@cdt.util, @cdt.logger, @doctrine]        

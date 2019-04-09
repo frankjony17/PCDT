@@ -1,0 +1,16 @@
+URL: http://partetransporte.etecsa.cu/Login.asp
+
+
+dtij:
+    txtusuario: isaim.cuti%F1o
+    txtcontra: 123456789
+    txtcontra_ok: 25F9E794323B453885F5181F1B624D0B
+    submit: Enviar
+    
+cdtij:
+    txtusuario: operativo.cddtij
+    txtcontra: opcddtij
+    txtcontra_ok: CCC9317DDA8BCC73D6B302A6F60C7552
+    submit: Enviar
+    
+#Request URL:http://partetransporte.etecsa.cu/DelRegistro.asp?id=2426225&Opc=&day=15&month=2&year=2014&des=5    

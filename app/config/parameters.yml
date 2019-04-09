@@ -1,0 +1,23 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_pgsql
+    database_host: 127.0.0.1
+    
+    database_port: 5432
+    database_name: etecsa_cd_db
+    
+    database_user: devusr
+    database_password: devusr
+    
+    debug_toolbar: false
+    debug_redirects: false
+    use_assetic_controller: true
+
+swiftmailer:
+    transport: smtp
+    host: mail.etecsa.cu
+    port: 465
+    encryption: ssl
+#    auth_mode: login
+#    username: cdtij@etecsa.cu
+#    password: xcvcxv

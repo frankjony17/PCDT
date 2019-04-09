@@ -1,0 +1,9 @@
+
+services:
+    otros.util:
+        class: Otros\NomencladorBundle\Services\Util
+        arguments: [@doctrine, @validator]
+        
+    otros.sap:
+        class: Otros\NomencladorBundle\Services\SapRH
+        arguments: [@cdt.util, @doctrine]

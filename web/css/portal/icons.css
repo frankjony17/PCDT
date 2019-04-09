@@ -1,0 +1,11 @@
+/* 
+    Created on : 20-mar-2014, 23:26:01
+    Author     : Frank
+*/
+
+.login {
+    background-image : url(../../images/portal/login.png) !important;
+}
+.cancel {
+    background-image : url(../../images/portal/cancel.png) !important;
+}

@@ -1,0 +1,8 @@
+Util\cURLBundle\Entity\EmailModulo:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: modulo
+        
+Util\cURLBundle\Entity\EmailAddress:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: address
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: [emailModulo, unidadOrganizativa]

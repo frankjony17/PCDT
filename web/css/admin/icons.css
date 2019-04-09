@@ -1,0 +1,118 @@
+/* 
+    Created on : 14-ene-2014, 14:54:42
+    Author     : Frank
+*/
+
+/**TREEs**/
+.tree-departamento {
+    background-image : url(/images/admin/departamento.png) !important;
+}
+.tree-trabajador-externo {
+    background-image : url(/images/admin/trabajador-externo.png) !important;
+}
+.tree-trabajador-interno {
+    background-image : url(/images/admin/trabajador-interno.png) !important;
+}
+.tree-cargo {
+    background-image : url(/images/admin/cargo.png) !important;
+}
+.tree-reportes {
+    background-image : url(/images/reportes.png) !important;
+}
+.tree-ayuda {
+    background-image : url(/images/tree-ayuda.png) !important;
+}
+.tree-roles {
+    background-image : url(/images/admin/roles.png) !important;
+}
+.tree-usuarios {
+    background-image : url(/images/admin/usuarios.png) !important;
+}
+.legend-user {
+    background-image : url(/images/admin/legend.png) !important;
+}
+.menu-active-item {
+    background-image : url(/images/admin/users-activo.png) !important;
+}
+.menu-password-item {
+    background-image : url(/images/admin/password.png) !important;
+}
+.menu-edit-item {
+    background-image : url(/images/admin/user-edit.png) !important;
+}
+.menu-roles-item {
+    background-image : url(/images/admin/roles.png) !important;
+}
+.menu-dasactivar-item {
+    background-image : url(/images/admin/user-inactivo.png) !important;
+}
+.add-user {
+    background-image : url(/images/admin/add-user.png) !important;
+}
+.remove-user {
+    background-image : url(/images/admin/remove-user.png) !important;
+}
+.load-user-db {
+    background-image : url(/images/admin/database.png) !important;
+}
+.load-user-ldap {
+    background-image : url(/images/admin/ldap.png) !important;
+}
+.load-user {
+    background-image : url(/images/admin/load-user.png) !important;
+}
+.tree-estructura-interna {
+    background-image : url(/images/admin/tree-estructura-interna.png) !important;
+}
+.tree-unidad-organizativa {
+    background-image : url(/images/admin/tree-unidad-organizativa.png) !important;
+}
+.tree-area {
+    background-image : url(/images/admin/tree-area1.png) !important;
+}
+.tree-estructura-externa {
+    background-image : url(/images/admin/tree-estructura-externa.png) !important;
+}
+.add-area-trabajador {
+    background-image : url(/images/add.png) !important;
+}
+.add-cargo-trabajador {
+    background-image : url(/images/add.png) !important;
+}
+.update-all-trabajadores {
+    background-image : url(/images/admin/update-all-trabajadores.png) !important;
+}
+.add-modulo {
+    background-image : url(/images/admin/add-modulo.png) !important;
+}
+
+.a1 {
+    background-image : url(/images/admin/area/01.png) !important;
+}
+.a2 {
+    background-image : url(/images/admin/area/02.png) !important;
+}
+.a3 {
+    background-image : url(/images/admin/area/03.png) !important;
+}
+.a4 {
+    background-image : url(/images/admin/area/04.png) !important;
+}
+.a5 {
+    background-image : url(/images/admin/area/05.png) !important;
+}
+.a6 {
+    background-image : url(/images/admin/area/06.png) !important;
+}
+.a7 {
+    background-image : url(/images/admin/area/07.png) !important;
+}
+.a8 {
+    background-image : url(/images/admin/area/08.png) !important;
+}
+.a9 {
+    background-image : url(/images/admin/area/09.png) !important;
+}
+.a10 {
+    background-image : url(/images/admin/area/10.png) !important;
+}

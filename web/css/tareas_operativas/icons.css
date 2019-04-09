@@ -1,0 +1,41 @@
+/* 
+    Created on : 07-mar-2015, 16:25:29
+    Author     : Frank
+*/
+
+.tareas-operativas {
+    background-image : url(/images/tarea_operativa/tareas-operativas.png) !important;
+}
+.tarea-historial {
+    background-image : url(/images/tarea_operativa/tarea-historial.png) !important;
+}
+.tarea-operativa-estado {
+    background-image : url(/images/tarea_operativa/tarea-operativa-estado.png) !important;
+}
+.legend-user {
+    background-image : url(/images/admin/legend.png) !important;
+}
+.tareas-acciones {
+    background-image : url(/images/tarea_operativa/tareas-acciones.png) !important;
+}
+.tareas-periodo-chequeo {
+    background-image : url(/images/tarea_operativa/tareas-periodo-chequeo.png) !important;
+}
+.tareas-estado {
+    background-image : url(/images/transporte/eventual.png) !important;
+}
+.tareas-estado-pendiente {
+    background-image : url(/images/tarea_operativa/tareas-estado-pendiente.png) !important;
+}
+.tareas-estado-cerrado {
+    background-image : url(/images/tarea_operativa/tareas-estado-cerrado.png) !important;
+}
+.tareas-correo-responsables {
+    background-image : url(/images/tarea_operativa/tareas-correo-responsables.png) !important;
+}
+.tareas-correo-otros {
+    background-image : url(/images/tarea_operativa/tareas-correo-otros.png) !important;
+}
+.tareas-pendiente-por {
+    background-image : url(/images/admin/trabajador-interno.png) !important;
+}

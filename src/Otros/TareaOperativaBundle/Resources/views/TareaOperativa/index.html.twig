@@ -1,0 +1,49 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}TAREAS-OP-ETECSA{% endblock %}
+
+{% block favicon %}{{ asset('favicon.ico') }}{% endblock %}
+
+{% block extjs %}{% include "::ext-4.2.1.html.twig" %}{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/tareas_operativas/index.css') }}" />
+{% endblock %}
+
+{% block javascripts %}<script>
+{% include "AdminBundle:Admin:globalScript.html.twig" %}
+
+Ext.draw.engine.ImageExporter.defaultUrl = entorno+"/util/chart/export";
+
+Ext.application({
+    name: 'CDT',
+    appFolder: '/js/app',
+
+    controllers: [
+        {% if modulo == 'especialista' %}
+            "tarea_operativa.especialista.ViewportController",
+            "tarea_operativa.especialista.TareaGridController",
+            "tarea_operativa.especialista.TareaFormController",
+            "tarea_operativa.especialista.OperacionesMenuController",
+            "tarea_operativa.especialista.AccionFormController",
+            "tarea_operativa.especialista.HistorialController",
+            "email.EmailController",
+        {% elseif modulo == 'responsable' %}
+            "tarea_operativa.responsable.ViewportController",
+            "tarea_operativa.responsable.TareaGridController",
+        {% endif %}
+    ],
+    launch : function()
+    {
+        {% if modulo == 'especialista' %}
+            Ext.create('CDT.view.tarea_operativa.Viewport', { appId: 'tareas-operativas-app-especialista-id' });
+        {% elseif modulo == 'responsable' %}
+            Ext.create('CDT.view.tarea_operativa.Viewport', { appId: 'tareas-operativas-app-responsable-id' });
+
+        {% else %}
+            location.href = entorno+'/secured/logout';
+        {% endif %}
+    }
+});
+showWindowsAccion = function(id){Ext.create('CDT.view.tarea_operativa.especialista.accion.AccionForm',{btnText:'Editar',btnIconCls:'edit',myId:id,title:'Editar Acción'});}
+</script>{% endblock %}

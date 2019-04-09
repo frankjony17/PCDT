@@ -1,0 +1,42 @@
+/* 
+    Created on : 07-mar-2015, 15:59:54
+    Author     : Frank
+*/
+
+@import url(icons.css);
+
+.x-grid-row-color-pendiente {
+    background-color: #ff9999;
+}
+.x-grid-row-color-presente {
+    background-color: rgba(248, 6, 0, 0.88);
+}
+.x-grid-row-color-pasado {
+    background-color: rgba(174, 138, 154, 0.62);
+}
+
+.x-grid-row-focused .x-grid-td,
+.x-grid-row-over .x-grid-td,
+.x-grid-row-selected .x-grid-td
+{
+    background-color: #ffffff;
+}
+
+.x-grid-row-focusedaa {background-color:#e2eff8}
+
+
+
+#acciones-header {
+    background: #dd6666;
+    color: #ffffff;
+    border: solid #ccc 1px;
+
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;
+
+    padding: 5px;
+}

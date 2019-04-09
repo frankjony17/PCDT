@@ -1,0 +1,113 @@
+/* 
+    Created on : 11-ago-2015, 12:48:29
+    Author     : Frank
+*/
+@import "icons.css";
+
+.menu-title{
+    background: #ececec;
+    border-style: solid;
+    border-color: #60a3dd #99bbe8 #99bbe8 #60a3dd;
+    border-width: 1px;
+    text-align: center;
+    color: #616161;
+    font: 14px tahoma,arial,verdana,sans-serif;
+    display: block;
+    padding: 4px 4px 4px 4px;
+}
+
+.fa{
+    color: #4f4f4f;
+    opacity: 1;
+}
+.fa-question{
+    color: red;
+    opacity: 1;
+}
+.fa-check{
+    color: #ececec;
+    opacity: 1;
+}
+.fa-ban{
+    color: #ececec;
+    opacity: 1;
+}
+
+/*
+    Tablas
+*/
+.tablestayle-indicador table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tablestayle-indicador table {
+    color: #333;
+    font-family: sans-serif;
+    font-size: .9em;
+    line-height: 40px;
+    border-spacing: 0;
+    border: 1px solid #60a3dd;
+    width: 780px;
+    background-color: #eaeff4;
+}
+
+.tablestayle-indicador thead tr:first-child {
+    background: #60a3dd;
+    color: #fff;
+    border: none;
+}
+
+.tablestayle-indicador thead tr:last-child th {border-bottom: 2px solid #ddd;}
+
+.tablestayle-indicador tbody tr:hover {background-color: #eaeff4;}
+.tablestayle-indicador tbody tr:last-child td {border: none;}
+.tablestayle-indicador tbody td {border-bottom: 1px solid #ddd; text-align: center;}
+
+.tablestayle-indicador td:last-child {
+    background: #60a3dd;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+/**
+    Tabla del Panel CM
+*/
+.tablestayle-cm table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tablestayle-cm table {
+    color: #333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    line-height: 40px;
+    border-spacing: 0;
+    border: 1px solid #60a3dd;
+    background-color: #ffffff;
+}
+
+.tablestayle-cm td {
+    border: 1px solid #eaeff4;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tablestayle-cm td:first-child {
+    background: #60a3dd;
+    color: #f0f0f0;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#text-item-cm {
+    color: #333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
