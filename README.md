@@ -1,18 +1,10 @@
-# projects
-Java, Python, PHP. Spring, Django, Sympony...
 
-Spring Framework, Java.
-Django Framework web, Python.
-Symfony Framework web, PHP.
-
-NodeJS, Nw.js.
-
-AngularJS.
-ExtJS.
+PHP5.3, Symfony 2.0, JavaScript - Ext-4.2.1, Ext-6.0.1, Ext-6.2.0.
 
 HTML5
 CSS3
 JavaScript
 
+ExtJS.
 
-7 years of experience, 7 anos de experiência, 7 años de experiencia...
+Symfony Framework web, PHP.
